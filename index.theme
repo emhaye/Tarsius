@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Tarsius
+Comment=Tarsius GTK Theme for BlankOn Linux
+Encoding=UTF-8
+
+Name[en_US]=Tarsius
+
+[X-GNOME-Metatheme]
+GtkTheme=Tarsius
+MetacityTheme=Tarsius
+IconTheme=Tebu
+CursorTheme=DMZ-Black
+ButtonLayout=close,minimize:maximize
