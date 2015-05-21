@@ -3435,12 +3435,10 @@ GtkScrolledWindow {
     background-color: @theme_bg_color;                 
 }
 
-
 GtkFileChooserDefault .sidebar.view{
     background-color: @theme_bg_color;
     color: none;
-    border-radius: 0px
-    
+    border-radius: 0px    
 }
 
 .sidebar,
@@ -3451,7 +3449,6 @@ GtkFileChooserDefault .sidebar.view{
 
 NoiseInfoPanel,
 GthSidebar,
-
 GeditPanel,
 .sidebar .view,
 .sidebar,
@@ -3468,7 +3465,6 @@ GeditPanel,
 .source-list.view.separator 
 .sidebar .separator {
     color: transparent;
-
 }
 
 .sidebar .view,
@@ -3490,8 +3486,8 @@ GeditPanel:hover,
 .sidebar.view:hover,
 .source-list:hover,
 .source-list.view:hover {
-    background-color: @theme_bg_color;
-    color: @theme_unfocused_fg_color;
+    background-color: rgba(61,155,218,0.1);
+    color: @theme_fg_color;
 }
 
 NoiseInfoPanel:selected,
@@ -3511,13 +3507,12 @@ GthSidebar:selected,
 .sidebar.view:selected:backdrop:hover,
 .source-list:selected:backdrop:hover,
 .source-list.view:selected:backdrop:hover,
-
 .sidebar .view:selected:backdrop,
 .sidebar:selected,
 .sidebar.view:selected:backdrop,
 .source-list:selected:backdrop,
 .source-list.view:selected:backdrop {
-    background-color: shade (@theme_bg_color, 0.87) ;
+    background-color: shade (@theme_bg_color, 0.87);
     color: @theme_text_color;
     text-shadow: 0 1px alpha (#fff, 0.2);
     icon-shadow: 0 1px alpha (#fff, 0.2);
