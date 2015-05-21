@@ -3,6 +3,7 @@
 @define-color theme_bg_color #ededed;
 @define-color theme_bg_color2 shade (#ededed, 0.99);
 @define-color theme_selected_bg_color #3d9bda;
+/*@define-color theme_selected_bg_color #35B9AB;*/
 @define-color theme_text_color #575757;
 @define-color theme_fg_color @theme_text_color;
 @define-color theme_selected_fg_color #ffffff;

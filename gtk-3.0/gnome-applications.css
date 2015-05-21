@@ -58,6 +58,84 @@ TerminalWindow .notebook.header {
   background-color: alpha (@theme_bg_color, 0.9);
 }
 
+TerminalWindow .scrollbar {
+    background-image: none;
+    border-style: solid;
+    border: 1px solid transparent;
+    -GtkRange-trough-border: 2;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+    -GtkRange-slider-width: 6;
+    -GtkScrollbar-min-slider-length: 30;
+
+    -GtkRange-stepper-spacing: 0;
+    -GtkRange-trough-under-steppers: 1;
+}
+
+/* Slider */
+TerminalWindow .scrollbar.slider {
+    background-color: @scrollbar_slider;
+    border-radius: 6px;
+}
+
+TerminalWindow .scrollbar.slider:hover {
+    background-color: @scrollbar_slider_prelight;
+    background-image: none;
+}
+
+TerminalWindow .scrollbar.slider:active.
+TerminalWindow .scrollbar.slider:prelight:active {
+    background-color: @scrollbar_slider_active;
+    background-image: none;
+}
+
+TerminalWindow .scrollbar.slider:insensitive {
+    background-color: @scrollbar_slider_insensitive;
+}
+
+TerminalWindow .scrollbar.slider:backdrop {
+    background-color: @scrollbar_slider_unfocused;
+}
+
+TerminalWindow .scrollbar.slider.fine-tune:prelight:active {
+      background-image: none;
+      border-style: solid;
+      border-color: transparent;
+      border-width: 5px;
+}
+
+/* Troughs */
+TerminalWindow .scrollbars-junction, /* the small square between scrollbars!!! */
+TerminalWindow .scrollbar.trough {
+    /*border-radius: 10px;*/
+    background-image: none;
+    background: @scrollbar_trough;
+    border-width: 0;
+    border-image: none;
+}
+
+TerminalWindow .scrollbar.trough:insensitive {
+    background: @scrollbar_trough;
+    border: 5px solid transparent;
+}
+
+TerminalWindow .scrollbars-junction:backdrop,
+TerminalWindow .scrollbar.trough:backdrop {
+    background-image: none;
+    background: @scrollbar_trough;
+    border-width: 0;
+    border-radius: 0;
+    border-image: none;
+}
+
+TerminalWindow .scrollbar.trough:insensitive:backdrop {
+    background-image: none;
+    background: @scrollbar_trough;
+    border-width: 0;
+    border-radius: 0;
+    border-image: none;
+}
+
 /*
  * Nautilus
  */
