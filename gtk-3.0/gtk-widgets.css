@@ -2309,7 +2309,7 @@ GtkLinkButton.button:active {
 }
 
 .notebook tab.reorderable-page:hover {
-    background-color: @theme_bg_color;
+    background-color: none;
     border-left: @transparent;
     border-right: @transparent;
     border-bottom: 2px solid shade (@borders, 1.15);
