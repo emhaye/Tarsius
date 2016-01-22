@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   height="18"
+   width="20"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="distributor.svg">
+  <defs
+     id="defs15015" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="741"
+     id="namedview15013"
+     showgrid="false"
+     inkscape:zoom="16"
+     inkscape:cx="1.8271347"
+     inkscape:cy="5.9232001"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;fill-opacity:0;stroke:#232323;stroke-width:2.75684381;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 14.564138,8.845244 c 0,3.476383 -2.818244,6.294628 -6.2946279,6.294628 -3.4763838,0 -6.2946279,-2.818245 -6.2946279,-6.294628 0,-3.4763846 2.8182441,-6.2946281 6.2946279,-6.2946281 3.4763839,0 6.2946279,2.8182435 6.2946279,6.2946281 z"
+     id="path8" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#232323;stroke-width:2.52728629;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;fill-opacity:0"
+     d="m 17.189726,2.4869394 0.143091,0 0,12.8899746 -0.143156,0 z"
+     id="path10" />
+</svg>
