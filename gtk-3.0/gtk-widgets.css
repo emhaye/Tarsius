@@ -3241,11 +3241,13 @@ GtkListBox,
 .source-list.view {
   background-image: linear-gradient(to bottom,
                                 shade (@titlebar_color, 1.09),
-                                shade (@titlebar_color, 1.09)
+                                shade (@titlebar_color, 0.90)
                                 );
     color: #2d2d2d;
     -gtk-icon-style: symbolic;
     font: SNFS Display Thin 12;
+    text-shadow: 0 1px alpha (#fff, 0.2);
+    icon-shadow: 0 1px alpha (#fff, 0.0);
 }
 .sidebar:backdrop,
 .sidebar .view:selected:backdrop,
@@ -3314,6 +3316,8 @@ GtkDialog .sidebar .view:hover:selected,
 .source-list.view:selected:hover,
 .source-list.view:selected:focus {
     color: @base_color;
+    text-shadow: 0 1px alpha (#000, 0.2);
+    icon-shadow: 0 1px alpha (#000, 0.0);
     background-color: @selected_bg_color;
 }
 
@@ -3351,10 +3355,12 @@ GtkDialog .sidebar .view:hover:selected:backdrop,
 .source-list.badge:prelight:selected {
     background-image: none;
     background-color: alpha (#000, 0.4);
-    color: @base-color;
+    color: @titlebar_color;
     border-radius: 10px;
     padding: 0 5px;
     margin: 0 3px;
+    text-shadow: 0 1px alpha (#000, 0.1);
+    icon-shadow: 0 1px alpha (#000, 0.1);
     border-width: 0;
 }
 

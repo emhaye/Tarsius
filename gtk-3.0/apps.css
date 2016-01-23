@@ -556,11 +556,17 @@ NautilusWindow .pane-separator {
 	background-image: none;
 }
 
-NautilusWindow .sidebar .view.cell:selected,
-NautilusWindow .sidebar row.cell:selected,
-NautilusWindow .source-list.sidebar.view .view.cell:selected,
-NautilusWindow .source-list.sidebar.view row.cell:selected {
-  color: #ffffff;
+.view:selected, .view:selected:focus, .view:selected:hover, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.sidebar-button.button:active, .menuitem.button.flat:selected, .menuitem.sidebar-button.button:selected, .list-row:selected, .sidebar:selected, .sidebar .view:selected, GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected:focus, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover, GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:selected, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:active:hover, GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:active,
+NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected,
+NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover,
+NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:selected,
+NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover,
+NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:active {
+  background-image: none;
+  background-color: @selected_bg_color;
+  color: @base-color;
+  text-shadow: 0 1px alpha (#000, 0.2);
+  icon-shadow: 0 1px alpha (#000, 0.0);
 }
 
 NautilusWindow > GtkGrid > .pane-separator,
