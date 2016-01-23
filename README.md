@@ -1,7 +1,7 @@
 #Tarsius GTK/Gnome-Shell 3.18 Theme
 
 ![Tarsius_screenshot](https://github.com/dotovr/tarsius-gtk-theme/blob/master/Screen1.png)
-![TarsiusGnomeShell_screenshot](https://github.com/dotovr/tarsius-gtk-theme/blob/master/Screenshoot2.png)
+![TarsiusGnomeShell_screenshot](https://raw.githubusercontent.com/dotovr/tarsius-gtk-theme/master/Screenshot2.png)
 
 
 
