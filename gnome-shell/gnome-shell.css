@@ -150,19 +150,17 @@ StScrollBar StButton#vhandle:active {
 /* Slider */
 
 .slider {
-    height: 1em;
-    -slider-height: 0.3em;
-/*    -slider-background-color: #cdcdca;
-    -slider-border-color: #a7aba7;
-    -slider-active-background-color: #7eec76;
-    -slider-active-border-color: #42a84b;*/
-    -slider-background-color: rgba(50,50,50,.7);
+    height: 1.08em;
+    -slider-height: 10px;
+    -slider-border-color: #F5F5F5;
+    -slider-background-color: rgba(255,255,255, 255);
     -slider-border-color:transparent;
-    -slider-active-background-color: #c0c3cc;
-    -slider-active-border-color:rgba(192,195,204,.5);
+    -slider-active-background-color: rgba(21,126,251, 255);
+    -slider-active-border-color: #F5F5F5;
     -slider-border-width: 1px;
     -slider-handle-radius: 6px;
-    color:white;
+    color: #D2D2D2;
+    box-shadow: 0px 2px 4px rgba(0,0,0,1.8);
 }
 
 /* PopupMenu */
@@ -213,14 +211,15 @@ StScrollBar StButton#vhandle:active {
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
     background-color: transparent;
-    border: 0px solid;
-    box-shadow: 0px 2px 40px -6px rgba(0,0,0,.90);
+    border: 0px solid rgba(240,240,240,0.9);
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.55),
+                0 12px 30px -6px rgba(0,0,0, 0.95);
     -boxpointer-gap: 12px;
     
     -arrow-border-radius: 4px;
-    -arrow-background-color: #F3F3F3;
-    -arrow-border-width: 0;
-    -arrow-border-color: #000;
+    -arrow-background-color: #EDEDED;
+    -arrow-border-width: 1px;
+    -arrow-border-color: rgba(196,196,196, 255);
     -arrow-base: 0;
     -arrow-rise: 0;
     color:#333;
@@ -689,10 +688,10 @@ StEntry:insensitive,
 
 #panel {
     background-gradient-direction:none;
-    background-color: rgba(222,222,222,0.70);
+    background-color: rgba(222,222,222,0.90);
   /*  background-color: rgba(255,255,255,0.75);
     border:1px solid rgba(200,200,200,.5);*/
-    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 1px -2px rgba(0,0,0,0.5);
     border: 1px solid rgba(90,105,111,0.5);
  /*	   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.15);*/
     border-top:0px;border-right:0px;border-left:0px;
