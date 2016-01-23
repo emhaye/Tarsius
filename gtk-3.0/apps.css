@@ -564,7 +564,7 @@ NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover,
 NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:active {
   background-image: none;
   background-color: @selected_bg_color;
-  color: @base-color;
+  color: @base_color;
   text-shadow: 0 1px alpha (#000, 0.2);
   icon-shadow: 0 1px alpha (#000, 0.0);
 }
