@@ -3666,7 +3666,7 @@ GtkModelButton.button {
     color: @fg_color;
 }
 
-GtkModelButton.button:active
+GtkModelButton.button:active,
 GtkModelButton.button:insensitive,
 GtkModelButton.button:active:insensitive,
 GtkModelButton.button {
