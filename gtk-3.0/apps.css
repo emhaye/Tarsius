@@ -512,7 +512,7 @@ TerminalWindow .scrollbars-junction, /* the small square between scrollbars!!! *
 TerminalWindow .scrollbar.trough {
     /*border-radius: 10px;*/
     background-image: none;
-    background: #ebebeb;
+    background: #ededed;
     border-width: 0;
     border-image: none;
 }
@@ -548,19 +548,20 @@ NautilusWindow .sidebar .frame {
     border-radius: 0 0 0 6px;
 }
 
-NautilusWindow .sidebar row:hover {
-	background-color: transparent;
-}
-
-
 NautilusWindow * {
-	-GtkPaned-handle-size: 0px;
+	-GtkPaned-handle-size: 1px;
 }
 
 NautilusWindow .pane-separator {
 	background-image: none;
 }
 
+NautilusWindow .sidebar .view.cell:selected,
+NautilusWindow .sidebar row.cell:selected,
+NautilusWindow .source-list.sidebar.view .view.cell:selected,
+NautilusWindow .source-list.sidebar.view row.cell:selected {
+  color: #ffffff;
+}
 
 NautilusWindow > GtkGrid > .pane-separator,
 NautilusWindow > GtkGrid > .pane-separator:hover {
@@ -582,7 +583,6 @@ NautilusQueryEditor .toolbar {
     padding-bottom: 2px;
     border-width: 1px 0 0 0;
     border-style: solid;
-    border-color: none;
     background-image: none;
 }
 

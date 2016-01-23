@@ -404,7 +404,7 @@ GtkProgressBar.trough:backdrop,
 
 .progressbar row:selected:focused,
 .trough row:selected:focused  {
-  ackground-color: @theme_selected_bg_color;
+  background-color: @theme_selected_bg_color;
 }
 
 .entry.progressbar,
@@ -1962,32 +1962,32 @@ background-color: transparent;
 /*Label Trickery*/
 
 .notebook tab GtkLabel {
-color: alpha(@text_color, 0.75);
-padding: 2px 5px;
-transition: all 100ms ease-out;}
+  color: alpha(@text_color, 0.75);
+  padding: 2px 5px;
+  transition: all 100ms ease-out;
 }
 
 .dynamic-notebook .notebook tab GtkLabel {
-padding: 0 5px;
+  padding: 0 5px;
 }
 
 .notebook tab:active GtkLabel,
 .notebook .active-page,
 .notebook tab .active-page GtkLabel {
-color: @text_color;
-transition: all 100ms ease-out;}
+  color: @text_color;
+  transition: all 100ms ease-out;
 }
 
 .notebook tab:backdrop GtkLabel,
 .notebook tab GtkLabel:backdrop {
-color: alpha(@text_color, 0.75);
+  color: alpha(@text_color, 0.75);
 }
 
 .notebook .prelight-page,
 .notebook .prelight-page GtkLabel {
     color: @theme_fg_color;
     transition: all 100ms ease-in;
-  }
+}
 
 /*--------------
 Close button
@@ -3232,8 +3232,6 @@ GtkListBox,
 /************************
 * Sidebar & Source List *
 ************************/
-
-
 .source-list.category-expander:hover,
 .gedit-document-panel,
 .sidebar,
@@ -3241,14 +3239,13 @@ GtkListBox,
 .sidebar GtkScrolledWindow,
 .source-list,
 .source-list.view {
- 
-   background-image:linear-gradient(to bottom,
-                           transparent,
-                           transparent
-                           );
-     background-color: transparent;
-    /*color: shade (@titlebar_color, 0.50);*/
+  background-image: linear-gradient(to bottom,
+                                shade (@titlebar_color, 1.09),
+                                shade (@titlebar_color, 1.09)
+                                );
+    color: #2d2d2d;
     -gtk-icon-style: symbolic;
+    font: SNFS Display Thin 12;
 }
 .sidebar:backdrop,
 .sidebar .view:selected:backdrop,
@@ -3263,8 +3260,15 @@ GtkListBox,
     color: shade (@titlebar_color, 0.50);
 }
 
-.sidebar .separator {
-    color: transparent;
+.sidebar.separator,
+.sidebar.view.separator,
+.sidebar .view.separator,
+.view.separator,
+.separator {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    color: shade(@theme_bg_color, 0.8);
 }
 
 GtkDialog .sidebar,
@@ -3294,7 +3298,7 @@ GtkDialog .sidebar GtkScrolledWindow {
 .sidebar .view:hover,
 .source-list.view:hover {
     background-color: alpha(shade (@titlebar_color, 0.4), 0.2);
-        color: shade (@titlebar_color, 0.50);
+    color: shade (@titlebar_color, 0.50);
 }
 
 GtkDialog .sidebar .view:selected,
@@ -3308,15 +3312,9 @@ GtkDialog .sidebar .view:hover:selected,
 .popover .sidebar.view:selected,
 .source-list.view:selected,
 .source-list.view:selected:hover,
-.source-list.view:selected:focus
- {
-    color: shade (@titlebar_color, 1.60);
-    text-shadow: 0 1px alpha (#000, 0.2);
-    icon-shadow: 0 1px alpha (#000, 0.0);
-
-    background-color: #508ddd;
-    
-
+.source-list.view:selected:focus {
+    color: @base_color;
+    background-color: @selected_bg_color;
 }
 
 GtkDialog .sidebar .view:selected:backdrop,
@@ -3326,8 +3324,6 @@ GtkDialog .sidebar .view:hover:selected:backdrop,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
     background-color:shade (@titlebar_color, 0.94);
-
-    
 }
 
 
@@ -3345,7 +3341,7 @@ GtkDialog .sidebar .view:hover:selected:backdrop,
 .sidebar .scrollbars-junction,
 .source-list .scrollbar.trough,
 .source-list .scrollbars-junction {
-    background-color: @titlebar_color;
+    background-color: transparent;
 }
 
 .source-list.badge,
@@ -3355,12 +3351,10 @@ GtkDialog .sidebar .view:hover:selected:backdrop,
 .source-list.badge:prelight:selected {
     background-image: none;
     background-color: alpha (#000, 0.4);
-    color: @titlebar_color;
+    color: @base-color;
     border-radius: 10px;
     padding: 0 5px;
     margin: 0 3px;
-    text-shadow: 0 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px alpha (#000, 0.1);
     border-width: 0;
 }
 
@@ -3382,6 +3376,7 @@ GtkDialog .sidebar .view:hover:selected:backdrop,
 .source-list.level-bar:selected,
 .source-list.level-bar:selected:focus {
     background-color: @base_color;
+    color: @base_color;
     border: 1px solid alpha (#000, 0.15);
     box-shadow: 0 1px 0 alpha (#fff, 0.25);
 }
