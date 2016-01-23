@@ -171,7 +171,7 @@ StScrollBar StButton#vhandle:active {
 .popup-submenu-menu-item:open,
 .popup-submenu-menu-item:checked {
     background-gradient-direction: none;
-    box-shadow: inset 0px 3px 4px rgba(0,0,0,0);
+    box-shadow: 0px 2px 4px rgba(0,0,0,.25);
     background-color: rgba(150,150,150,.2);}
 .popup-menu .popup-sub-menu {
     background-gradient-direction: none;
@@ -213,7 +213,8 @@ StScrollBar StButton#vhandle:active {
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
     background-color: transparent;
-    border: 0px transparent;
+    border: 0px solid;
+    box-shadow: 0px 2px 40px -6px rgba(0,0,0,.90);
     -boxpointer-gap: 12px;
     
     -arrow-border-radius: 4px;
@@ -1452,8 +1453,7 @@ background-color:rgba(106,242,59,.75);
 .calendar-change-month-back:focus,
 .calendar-change-month-forward:hover,
 .calendar-change-month-forward:focus {
-/*    background-color: rgba(149,202,84,.5);*/
-    background-color:rgba(106,242,59,.75);
+    background-color: #157EFB;
     border-color: transparent;}
 .calendar-change-month-back:hover,
 .calendar-change-month-back:focus,
@@ -1467,8 +1467,7 @@ background-color:rgba(106,242,59,.75);
 {background-image: url("./assets/calendar-arrow-right-hover.svg");}
 .calendar-change-month-back:active,
 .calendar-change-month-forward:active {
-/*    background-color: rgba(149,202,84,.7);*/
-background-color:rgba(70,85,91,.5);}
+background-color:rgba(21,156,251,.5);}
 
 /*TODAY BUTTON*/
 .datemenu-today-button {
@@ -1494,7 +1493,7 @@ color:white}
   padding:8px}
 .world-clocks-button:hover,
 .world-clocks-button:focus {
-  background-color:rgba(150,150,150,.25);}
+  background-color:rgba(21,156,251, 255);}
 .world-clocks-button:active{
   background-color: white;
   color:#333}
@@ -1508,9 +1507,9 @@ color:white}
     font-size:70%;}
 .calendar-day-base:hover,
 .calendar-day-base:focus {
-    background-color: rgba(149,149,149,.4);}
+    background-color: rgba(21,156,251,.5);}
 .calendar-day-base:active {
-    background-color: rgba(149,149,149,7);}
+    background-color: rgba(21,156,251,.5);}
 .calendar-day-base.calendar-day-heading {
     font-weight:bold;
     color: #777;
@@ -1572,11 +1571,11 @@ color:white}
 
 /* Message List */
 .message-list {
-    background: rgba(10,10,10,.8);
+    background: transparent;
     width: 400px;
     max-width:600px;
     padding:0px;
-    color:#999;}
+    color:#333;}
 .message-list-sections {
   spacing: 0px;
   margin:0px}
@@ -1588,17 +1587,18 @@ color:white}
 .message-list-section-title-box {
   spacing: 3em;
   padding:0px;
-  background-color:rgba(10,10,10,.5);}
+  background-color: transparent;}
 .message-list-section-title{
+  font-family: SNFS Display Bold;
 font-weight: bold;
-color:#999;
+color:#333;
 background:transparent;
 padding:8px 16px;
 border-radius:0px;}
 .message-list-section-title:hover,
-.message-list-section-title:focus
-{background:transparent;
-color:white
+.message-list-section-title:focus {
+  background: transparent;
+  color: #333;
 }
 .message-list-section-title:active {
 }
@@ -1606,21 +1606,23 @@ color:white
   icon-size: 16px;
   border-radius: 8px;
   color: rgba(10,10,10,.8);
-  background-color: rgba(210,10,0,.5);
+  background-color: rgba(255,255,255,.5);
   margin-right:8px}
 
 .message-list-section-close:hover > StIcon,
 .message-list-section-close:focus > StIcon {
-  background-color: rgb(210,10,0); }
+  background-color: rgb(255,255,255); }
 .message {
     background-color:transparent;
     border:0px solid rgba(180,180,180,.5);
-    border-bottom:1px;
-    color:white;
+    border-bottom:1px solid rgba(180,180,180,.5);
+    color:#2d2d2d;
     border-radius: 0px;
-/*    padding-left: 3px*/}
+}
   .message:hover, .message:focus {
-    background-color: rgba(210,145,226,.25);
+    background-color: #157EFB;
+    color: white;
+    border-radius: 4px;
     box-shadow: inset 3px 0px 0px rgba(210,145,226,.25);}
 .message-icon-bin {
   padding: 8px 0px 8px 8px; }
@@ -1629,15 +1631,15 @@ color:white
 .message-icon-bin > StIcon {
   icon-size: 16px; }
 .message-secondary-bin {
-  color: #999; }
+  color: #2d2d2d; }
 .message-secondary-bin > StIcon {
   icon-size: 16px; }
 .message-title {
   font-weight: normal;
-  color:#999;
+  color:#2d2d2d;
   padding-bottom: 2px}/*fikasasi klose*/
 .message-content {
-/*  font-family: helvetica, cantarell,sans-serif;*/
+  font-family: SNFS Display Bold;
   padding: 8px;
 font-weight: bold;
 }
