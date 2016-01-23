@@ -1641,8 +1641,6 @@ box-shadow:none;
     border-radius: 3px;
 }
 
- 
-
 /********************
 * Notebook and Tabs *
 ********************/
@@ -1661,7 +1659,7 @@ box-shadow:none;
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-    border: 0px none;
+    border: 1px solid shade (@titlebar_color, 0.70);
 }
 
 .notebook.header.left,
@@ -1672,7 +1670,12 @@ box-shadow:none;
                                   @bg_color,
                                   @bg_color
                                   );
+                                  
+                 
 }
+
+
+
 
 .notebook.header.bottom,
 .notebook.header,
@@ -1724,7 +1727,7 @@ color: @insensitive_color;
 .notebook tab.left {
     background-color: @bg_color;
     color: shade (@text_color, 1.12);
-padding: 1px 1px 0 1px;
+padding: 2px;
 border: none;
       border-radius: 2px 0 0 2px;
 
@@ -1734,7 +1737,7 @@ border: none;
 
 .notebook tab.bottom,
 .notebook tab.top {
-padding: 2px 2px 0 2px;
+padding: 2px 18px;
 
 border-radius: 0;
 
@@ -1751,7 +1754,7 @@ border-image: linear-gradient(to bottom,
 }
 
 .dynamic-notebook .notebook tab {
-padding: 2px 2px 0 2px ;
+padding: 4px ;
 
 border-radius: 0;
 
@@ -1918,7 +1921,7 @@ text-shadow: 0 1px alpha (#fff, 0.4);
 icon-shadow: 0 1px alpha (#fff, 0.4);
 
 border: 1px solid shade (@titlebar_color, 0.60);
-padding: 2px 2px 0 2px;
+
 }
 
 .notebook.frame {
@@ -1933,19 +1936,18 @@ background-color: @base_color;
 
 .dynamic-notebook .notebook tab > .entry {
 border-radius: 2px;
-padding: 2px 2px 0 2px;
+padding: 0px 4px;
 }
 
 .notebook tab > .entry {
 border-radius: 2px;
-padding: 2px 2px 0 2px;
+padding: 1px 4px;
 }
 
     .notebook tab .button {
     border:none;
 color:transparent;
     box-shadow:none;
-    padding: 2px 3px 0 3px;
 background-color: transparent;
 background-image:none;
     -gtk-icon-style: symbolic;
@@ -1961,17 +1963,19 @@ background-color: transparent;
 
 .notebook tab GtkLabel {
 color: alpha(@text_color, 0.75);
-padding: 2px 2px 0 2px;
+padding: 2px 5px;
+transition: all 100ms ease-out;}
 }
 
 .dynamic-notebook .notebook tab GtkLabel {
-padding: 2px 2px 0 2px;
+padding: 0 5px;
 }
 
 .notebook tab:active GtkLabel,
 .notebook .active-page,
 .notebook tab .active-page GtkLabel {
 color: @text_color;
+transition: all 100ms ease-out;}
 }
 
 .notebook tab:backdrop GtkLabel,
@@ -1979,7 +1983,44 @@ color: @text_color;
 color: alpha(@text_color, 0.75);
 }
 
+.notebook .prelight-page,
+.notebook .prelight-page GtkLabel {
+    color: @theme_fg_color;
+    transition: all 100ms ease-in;
+  }
 
+/*--------------
+Close button
+----------------*/
+.notebook tab .button.flat,
+.notebook tab .button.flat:active,
+.notebook tab .button,
+.notebook tab .button:active {
+    padding: 0;
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: transparent;
+    background-image: none;
+    background-color: transparent;
+    color: mix(@theme_text_color, @theme_base_color, 0.4);}
+
+.notebook tab .button.flat,
+.notebook tab .button {
+    box-shadow:none;
+  }
+
+.notebook tab .button.flat:hover,
+.notebook tab .button:hover {
+    background-color: shade (@titlebar_color, 1.04);
+    border: 1px solid transparent;
+    transition: all 100ms ease-in;
+  }
+
+.notebook .pane-separator,
+.notebook .pane-separator:hover {
+    background-color: @theme_base_color;
+  }
 
 /*************
 * ComboBoxes *
