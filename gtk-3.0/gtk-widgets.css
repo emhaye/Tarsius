@@ -1290,14 +1290,14 @@ GtkOverlay > .button:focus:active {
 
 .spinbutton .button {
     color: @base_color;
-    padding: 1px 5px;
-    border-width: 0;
+    padding: 2px 5px;
+    border-width: 0 0 0 1px;
     border-radius: 0;
     border-style: none;
     border-image: none;
     box-shadow: inset 1px 0 alpha (#000, 0.10);
 
-    background-color: @selected_bg_color;
+    background-color: #6d6b6d;
     background-image: none;
 }
 
@@ -2753,24 +2753,15 @@ GtkAppChooserDialog .search-bar {
 **************************/
 
 .suggested-action.button {
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  @selected_bg_color
-                                  );
-
-                                  border-width: 0 0 1px;
-
-                                  box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.1), 0.10),
-                                              inset 0 1px 0 0 alpha (@bg_highlight_color, 0.20);
+  background-color: #6d6b6d;
+  background-image: none;
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.02);
 }
 
 GtkOverlay .suggested-action.button {
     background-image: none;
-    background-color: @selected_bg_color;
-    border-width: 0 0 1px;
-
-    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.1), 0.10),
-                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.20);
+    background-color: #6d6b6d;
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.02);
 }
 
 .suggested-action.button GtkLabel,
@@ -2782,15 +2773,9 @@ GtkOverlay .suggested-action.button {
 
 .suggested-action.button:active,
 .suggested-action.button:active:hover {
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.20),
-                                  @selected_bg_color
-                                  );
-
-                                  border-width: 0 0 1px;
-
-                                  box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.1), 0.10),
-                                              inset 0 1px 0 0 alpha (@bg_highlight_color, 0.20);
+  background-color: #6d6b6d;
+  background-image: none;
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.02);
 }
 
 /****************************
