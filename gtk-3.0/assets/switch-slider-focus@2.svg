@@ -14,7 +14,7 @@
    width="44"
    height="44"
    id="svg2"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="switch-slider-focus@2.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -26,14 +26,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1366"
-     inkscape:window-height="715"
+     inkscape:window-height="722"
      id="namedview2576"
      showgrid="false"
      inkscape:zoom="4"
-     inkscape:cx="18.559014"
+     inkscape:cx="-17.315986"
      inkscape:cy="11"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="21"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <defs
@@ -1108,6 +1108,6 @@
   <path
      d="M 22.000008,0.999996 C 10.412923,0.999996 1,10.412926 1,21.999998 1,33.587072 10.412923,43 22.000004,43 33.587074,43 43.000014,33.587072 43,21.999998 43,10.412926 33.587074,0.999996 22.000008,0.999996 z"
      id="path7070"
-     style="color:#000000;fill:none;stroke:#4a90d9;stroke-width:1.99999988;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;fill:none;stroke:#157efb;stroke-width:1.99999988;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      inkscape:connector-curvature="0" />
 </svg>

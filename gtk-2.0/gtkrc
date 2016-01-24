@@ -289,9 +289,9 @@ style "murrine-menu"
 	ythickness        = 2
 	xthickness        = 0
 	
-	bg[SELECTED]      = shade (0.85, @selected_bg_color)
+	bg[SELECTED]      = @selected_bg_color
 	bg[NORMAL]        = @bg_color
-	bg[PRELIGHT]      = shade (0.85, @selected_bg_color)
+	bg[PRELIGHT]      = @selected_bg_color
 	bg[ACTIVE]        = @bg_color
 	bg[INSENSITIVE]   = @bg_color
 	fg[NORMAL]        = @text_color # Color for normal text.

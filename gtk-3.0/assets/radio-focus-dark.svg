@@ -14,8 +14,8 @@
    width="16"
    height="16"
    id="svg7539"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="radio-dark.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="radio-focus-dark.svg">
   <sodipodi:namedview
      pagecolor="#363b3e"
      bordercolor="#666666"
@@ -26,15 +26,15 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:window-width="1366"
-     inkscape:window-height="713"
+     inkscape:window-height="722"
      id="namedview37"
      showgrid="false"
      showborder="false"
-     inkscape:zoom="5.6568542"
-     inkscape:cx="-4.152954"
-     inkscape:cy="12.246886"
+     inkscape:zoom="16"
+     inkscape:cx="-0.15936695"
+     inkscape:cy="7.8766317"
      inkscape:window-x="0"
-     inkscape:window-y="30"
+     inkscape:window-y="21"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg7539" />
   <defs
@@ -270,14 +270,14 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <path
      d="m 13.531915,9.2765961 a 5.7304964,5.7304964 0 1 1 -11.4609931,0 5.7304964,5.7304964 0 1 1 11.4609931,0 z"
      id="path3010-3"
-     style="opacity:0.3;color:#000000;fill:none;stroke:#3d9bda;stroke-width:0.76406598000000003;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="opacity:0.3;color:#000000;fill:none;stroke:#157efb;stroke-width:0.76406598;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      transform="matrix(1.3087872,0,0,1.3087872,-2.210396,-4.1410896)" />
   <path
      d="m 14.5,8.0000001 a 6.5000002,6.5000002 0 0 1 -13,0 6.5000002,6.5000002 0 1 1 13,0 z"
