@@ -797,18 +797,16 @@ GtkScrolledWindow GtkViewport.frame {
 .stack-switcher .button:active,
 .stack-switcher .linked .button:active,
 .stack-switcher .button:checked,
-.stack-switcher .linked .button:checked
-
-{
-background-image: linear-gradient(to bottom,
+.stack-switcher .linked .button:checked {
+  background-image: linear-gradient(to bottom,
                               shade (@selected_bg_color, 1.30),
                              shade (@selected_bg_color, 1)
                               );
 
-border-color: shade (@selected_bg_color, 1);
-color:white;
-text-shadow: 0 1px alpha (#000, 0.2);
-icon-shadow: 0 1px alpha (#000, 0.2);
+  border-color: shade (@selected_bg_color, 1);
+  color:white;
+  text-shadow: 0 1px alpha (#000, 0.2);
+  icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 /**********/

@@ -151,12 +151,11 @@ StScrollBar StButton#vhandle:active {
 
 .slider {
     height: 1.08em;
-    -slider-height: 10px;
-    -slider-border-color: #F5F5F5;
+    -slider-height: 8px;
+    -slider-border-color: #dedede;
     -slider-background-color: rgba(255,255,255, 255);
-    -slider-border-color:transparent;
     -slider-active-background-color: rgba(21,126,251, 255);
-    -slider-active-border-color: #F5F5F5;
+    -slider-active-border-color: #dedede;
     -slider-border-width: 1px;
     -slider-handle-radius: 6px;
     color: #D2D2D2;
@@ -212,12 +211,12 @@ StScrollBar StButton#vhandle:active {
 .candidate-popup-boxpointer {
     background-color: transparent;
     border: 0px solid rgba(240,240,240,0.9);
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.55),
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.85),
                 0 12px 30px -6px rgba(0,0,0, 0.95);
     -boxpointer-gap: 12px;
     
     -arrow-border-radius: 4px;
-    -arrow-background-color: #EDEDED;
+    -arrow-background-color: #DEDEDE;
     -arrow-border-width: 1px;
     -arrow-border-color: rgba(196,196,196, 255);
     -arrow-base: 0;
@@ -887,25 +886,27 @@ transition-duration:300ms;
 
 /* tombol menu setting, sleep, end session*/
 .system-menu-action {
-    color: #111;
+    color: #333;
     border-radius: 32px; /* wish we could do 50% */
     padding: 13px;
     border: 1px transparent rgba(50,50,50,.0); /* using rgba() is flaky unfortunately */
     transition-duration:200ms;
-    /*background-color:rgba(150,150,150,.25)*/;}
+    box-shadow: 0px 1px 2px rgba(0,0,0,.5);
+    background-color:rgba(255,255,255,255);  
+}
 
 .system-menu-action:hover {
     color: #fff;
     border:none;
-    background-color: #157EFB;
+    background-color: #6d6b6d;
     padding: 14px;}
 
 .system-menu-action:focus {
-box-shadow: 0px 1px 2px rgba(0,0,0,.5);}
+    box-shadow: 0px 1px 2px rgba(0,0,0,.5);}
 
 .system-menu-action:active {
     color: white;
-    background-color: #595959;
+    background-color: #6d6b6d;
     transition-duration:0ms
 }
 
