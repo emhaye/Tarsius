@@ -43,8 +43,8 @@
     -GtkButtonBox-child-min-height: 20;
     -GtkButtonBox-child-internal-pad-y: 1;
 
-    -GtkProgressBar-min-horizontal-bar-height: 6;
-    -GtkProgressBar-min-vertical-bar-width: 6;
+    -GtkProgressBar-min-horizontal-bar-height: 8;
+    -GtkProgressBar-min-vertical-bar-width: 8;
 
     -GtkCheckMenuItem-indicator-size: 14;
     -GtkExpander-expander-size: 8;
@@ -349,17 +349,30 @@ background-color:transparent;
 /****************
  * Progress bar *
  ****************/
+ GtkProgressBar {
+     padding: 0;
+     border-width: 0;
+     border-radius: 32px;
+ }
 
 .progressbar,
 .progressbar row,
-.progressbar row:hover {
-    background-color: @theme_selected_bg_color;
-  border-radius: 2px;
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:hover,
+.progressbar row:selected:focus {
+  border-width: 0;
+  border-style: solid;
+  border-color: shade(@theme_selected_bg_color, 0.9);
+  background-color: @theme_selected_bg_color;
+  border-radius: 8px;
 }
 
-.progressbar.vertical {
-  border-radius: 2px;
+.progressbar.vertical,
+.progressbar.horizontal {
+  border-radius: 8px;
   background-color: @theme_selected_bg_color;
+  background-image: none;
 }
 
 .progressbar:backdrop,
@@ -375,18 +388,17 @@ background-color:transparent;
 GtkProgressBar.trough,
 .trough row,
 .trough row:hover {
-  border-width: 0;
-  border-radius: 2px;
-  border-style: solid;
-  border-color: shade(@theme_bg_color, 0.8);
-  background-color: shade(@theme_bg_color, 1.08);
+  padding: 0;
+  border-style: none;
+  border-radius: 8px;
   background-image: none;
+  background-color: @base_color;
 
 }
 
 GtkProgressBar.trough.vertical {
-  border-radius: 2px;
-  background-color: shade(@theme_bg_color, 1.08);
+  border-radius: 8px;
+  background-color: @base_color;
   background-image: none;
 }
 
@@ -400,6 +412,14 @@ GtkProgressBar.trough:backdrop,
     border-color: shade (@base_color, 0.75);
 }
 
+.osd GtkProgressBar.progressbar,
+GtkProgressBar.osd.progressbar {
+    border-style: none;
+    border-radius: 0;    
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
 .progressbar row:selected:focused,
 .trough row:selected:focused  {
   background-color: @theme_selected_bg_color;
@@ -407,10 +427,11 @@ GtkProgressBar.trough:backdrop,
 
 .entry.progressbar,
 .entry.progressbar:focus {
+  border-width: 0;
+  border-radius: 8px;
   background-color: @theme_selected_bg_color;
-
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  background-image: none;
+  color: @theme_selected_fg_color;
 }
 
 /************
@@ -450,11 +471,6 @@ GtkProgressBar.trough:backdrop,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     transition: all 100ms ease-in;
-
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  @selected_bg_color
-                                  );
 }
 
 .level-bar.fill-block.level-low {
@@ -2915,7 +2931,6 @@ GtkAssistant .sidebar {
  *************/
 
 GtkSwitch {
-    -GtkSwitch-slider-width: 38;
     padding: 0;
     border-radius: 16px;
     font: SNFS Display 11px;
@@ -2963,6 +2978,46 @@ GtkSwitch.trough:insensitive {
 /*****************************
 * Tree, List, and Icon Views *
 *****************************/
+GtkTreeView.view.progressbar {
+    color: alpha(@theme_selected_fg_color, 0.75);
+    border: 1px solid transparent;
+    background-image:none;
+    background-color: @selected_bg_color;
+    box-shadow: none;
+}
+
+GtkTreeView.view.progressbar:backdrop {
+    color: alpha(@theme_selected_fg_color, 0.75);
+    background-image:none;
+    background-color:  @selected_bg_color;
+    box-shadow: none;
+}
+
+GtkTreeView.view.progressbar:selected {
+    border: 1px solid shade(@theme_bg_color, 0.8);
+    color: white;
+    box-shadow: none;
+    background-image:none;
+    background-color: @selected_bg_color;
+}
+
+GtkTreeView.view.progressbar:selected:backdrop {
+    color: white;
+    border: 1px solid shade(@theme_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(@selected_bg_color, 1.22),
+                                      shade(@selected_bg_color, 1.06)
+                                      );
+}
+
+GtkTreeView.view.trough {
+    background-color: @base_color;
+    border: 1px solid shade(@theme_bg_color, 0.8);
+}
+GtkTreeView.view.trough:selected {
+    background-color: @base_color;
+    border: 1px solid shade(@theme_bg_color, 0.8);
+}
 
 GtkTreeView {
     -GtkTreeView-vertical-separator: 5px;
