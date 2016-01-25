@@ -682,14 +682,11 @@ style "chrome-gtk-frame" {
     ChromeGtkFrame::inactive-frame-color		= shade (0.5, @bg_color)
 
     ChromeGtkFrame::frame-gradient-size		= 100
-    ChromeGtkFrame::frame-gradient-color		= lighter (1.08,@bg_color)
-    ChromeGtkFrame::inactive-frame-gradient-color	= lighter (1.08,@bg_color)
+    ChromeGtkFrame::frame-gradient-color		= shade (1.08,@bg_color)
+    ChromeGtkFrame::inactive-frame-gradient-color	= shade (1.08,@bg_color)
 
     ChromeGtkFrame::scrollbar-trough-color 		= @base_color
     ChromeGtkFrame::scrollbar-slider-normal-color = "#666666"
-		
-		ChromeGtkFrame::incognito-frame-color = lighter (0.5, @bg_color)
-		ChromeGtkFrame::incognito-inactive-frame-color = lighter (0.5, @bg_color)
 }
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"
