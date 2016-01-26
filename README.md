@@ -1,10 +1,11 @@
-#Tarsius GTK/Gnome-Shell 3.18 Theme
+#Tarsius
 
-![Tarsius_screenshot](https://github.com/dotovr/tarsius-gtk-theme/blob/master/Screen1.png)
-![TarsiusGnomeShell_screenshot](https://raw.githubusercontent.com/dotovr/tarsius-gtk-theme/master/Screenshot2.png)
+Tarsius is a GTK theme created for [BlankOn OS Tambora](http://www.blankonlinux.or.id/). Thanks to original [Yosemite GTK Theme](http://kxmylo.deviantart.com/art/Yosemite-GTK-3-14-3-16-Theme-575639716) for GTK+ and [White](http://gnome-look.org/content/show.php/White?content=173840) for Gnome Shell as the base for this theme.
+If you find a bug or want an improvement in any way, simply raise an issue and we'll be there. Tarsius is licensed under MIT license.
 
+## Installation
 
-
-Tarsius is a GTK theme base on [Yosemite GTK 3.14/3.16 Theme](http://kxmylo.deviantart.com/art/Yosemite-GTK-3-14-3-16-Theme-575639716)
-
-Gnome Shell theme base on [White](http://gnome-look.org/content/show.php/White?content=173840)
+```
+$ mkdir ~/.themes
+$ git clone https://github.com/dotovr/Tarsius.git ~/.themes/Tarsius
+```
