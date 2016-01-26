@@ -548,6 +548,11 @@ NautilusWindow .sidebar .frame {
     border-radius: 0 0 0 6px;
 }
 
+NautilusWindow .sidebar-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 NautilusWindow * {
 	-GtkPaned-handle-size: 1px;
 }
