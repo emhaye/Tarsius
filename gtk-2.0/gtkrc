@@ -595,7 +595,6 @@ widget_class "*<GtkCombo>*"                     style "murrine-combo"
 widget_class "*<GtkMenu>*"                      style "murrine-menu"
 widget_class "*<GtkMenuBar>*"                   style "murrine-menubar"
 widget_class "*<GtkMenuItem>*"                  style "murrine-menu-item"
-widget_class "*<GtkMenuBar>.<GtkMenuItem>*"			style "murrine-menubar-menu-item"
 widget_class "*<GtkMenuItem>.*.<GtkScale>"      style "murrine-scale"
 
 widget_class "*.<GtkFrame>.<GtkLabel>"          style "murrine-frame-title"
