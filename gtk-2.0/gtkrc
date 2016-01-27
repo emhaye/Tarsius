@@ -18,7 +18,7 @@
 
 gtk_color_scheme	= "bg_color:#EDEDED\nselected_bg_color:#157EFB\nbase_color:#FFF"	# Background, base
 gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFF\ntext_color:#4D4D4D"	# Foreground, text
-gtk_color_scheme 	= "sidebar_color:#DEDEDE"                                           # Custom colors
+gtk_color_scheme 	= "sidebar_color:#DEDEDE\ntitlebar_bg_color:#e4e4e4\ntitlebar_fg_color:#838383\nmenubar_bg_color:#e4e4e4\nmenubar_fg_color:#838383"                       # Custom colors
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF"                    # Tooltips
 gtk_color_scheme	= "link_color:#157EFB"                                                 # Hyperlinks
 gtk_color_scheme	= "frame_color:#EDEDED\ninactive_frame_color:#EDEDED"               # Fix for Chrome
@@ -64,12 +64,11 @@ style "murrine-default"
 	GtkMenuBar          ::internal-padding			        = 0
 	GtkMenuBar          ::window-dragging			        = 1
 
-
 	GtkNotebook         ::tab-overlap 				        = 0
 
 	GtkPaned            ::handle-size          			    = 6
 
-	GtkMenuItem::arrow-scaling= 0.5
+	GtkMenuItem					::arrow-scaling									= 0.5
 
 	#GtkProgressBar		::min-vertical-bar-width            = 10
 	#GtkProgressBar		::min-horizontal-bar-height         = 10
@@ -90,8 +89,10 @@ style "murrine-default"
 	GtkScrolledWindow	::scrollbar-spacing                 = 0
 	GtkScrolledWindow	::scrollbars-within-bevel           = 1
 
+	GtkSeparatorMenuItem	::horizontal-padding 						= 0
+
 	GtkToolbar		    ::internal-padding			        = 0
-    GtkToolbar          :: shadow-type                      = GTK_SHADOW_NONE # Makes toolbars flat and unified.
+  GtkToolbar          :: shadow-type                      = GTK_SHADOW_NONE # Makes toolbars flat and unified.
 	GtkMenuBar          :: shadow-type                      = GTK_SHADOW_NONE # Makes menus flat and unified.
     
 	GtkTreeView		    ::expander-size				        = 7
@@ -132,17 +133,17 @@ style "murrine-default"
 	{
 		animation               = TRUE
 		arrowstyle              = 1
-		border_shades		    = { 1.15, 0.85 }
+		#border_shades		    = { 1.15, 0.85 }
 		colorize_scrollbar	    = TRUE
-		contrast                = 0.6
-		default_button_color	= @darker_color
-		focusstyle              = 3		
+		contrast                = 0.8
+		focusstyle              = 1		
 		glazestyle              = 0
-		#gradient_shades         = {1.18,1.09,1.08,0.9}
-		glowstyle               = 4
+		gradient_shades 				= { 1.0, 1.0, 1.0, 1.0 }
+		glowstyle               = 0
+		glow_shade							= 1.0 # amount of glow
 		highlight_shade         = 1.0		# set highlight amount for buttons or widgets
-		lightborder_shade       = 1.18		# sets lightborder amount for buttons or widgets
-		lightborderstyle        = 0		# 0 = lightborder on top side, 1 = lightborder on all sides
+		lightborder_shade       = 1.0		# sets lightborder amount for buttons or widgets
+		lightborderstyle        = 1		# 0 = lightborder on top side, 1 = lightborder on all sides
 		listviewstyle           = 0		# 0 = nothing, 1 = dotted, 2 = line
 		menubaritemstyle        = 0		# 0 = menuitem look, 1 = button look
 		menubarstyle            = 0		# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
@@ -153,12 +154,11 @@ style "murrine-default"
 		rgba                    = TRUE		# Alpha transparency
 		roundness               = 4		# 0 = square
 		scrollbarstyle          = 0		# 0 = nothing
-		separatorstyle          = 1
+		separatorstyle          = 0
 		shadow_shades           = { 1.10, 0.55 }
 		sliderstyle             = 0     	# 0 = nothing added
 		stepperstyle            = 1		# 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		toolbarstyle            = 0		# 0 = flat, 1 = glassy, 2 = gradient
-		trough_shades           = { 0.85, 1.0 }
 	}
 }
 
@@ -210,15 +210,11 @@ style "murrine-button" = "murrine-widest" {
 
 	bg[ACTIVE]                  = shade (0.80, @bg_color)
 	bg[NORMAL]                  = shade (1.15, @bg_color)
-	bg[PRELIGHT]				= shade (1.13, @bg_color)
-	bg[SELECTED]				= @widget_color
-	bg[INSENSITIVE]				= shade (0.98, @bg_color)
+	bg[PRELIGHT]								= shade (1.13, @bg_color)
+	bg[SELECTED]								= @selected_bg_color
+	bg[INSENSITIVE]							= shade (0.98, @bg_color)
 	
 	engine "murrine" {
-		border_shades           = {1.1, 0.9}
-		contrast                = 1.25
-		lightborderstyle		= 1
-		textstyle               = 1
 	}
 }
 
@@ -287,13 +283,19 @@ style "murrine-entry" = "murrine-widest"
 	}
 }
 
-style "murrine-frame-title" { fg[NORMAL] = lighter (@fg_color) }
+style "murrine-frame-title" {
+	fg[NORMAL] = lighter (@fg_color)
+}
 
+style "murrine-radiocheck" = "murrine-default" {
+	bg[NORMAL] = @base_color	
+	bg[SELECTED] = @selected_bg_color
 
-style "murrine-menu"
-{
-	ythickness        = 0
-	xthickness        = 0
+	text[NORMAL] = @base_color
+	text[PRELIGHT] = @base_color
+}
+
+style "murrine-menu" = "murrine-thin" {
 	
 	bg[SELECTED]      = @selected_bg_color
 	bg[NORMAL]        = @bg_color
@@ -321,20 +323,42 @@ style "murrine-menu"
 
 style "murrine-menu-item" = "murrine-wider"
 {
-    bg[SELECTED] = @selected_bg_color
 	bg[PRELIGHT] = @selected_bg_color
+	bg[SELECTED] = @selected_bg_color
+	bg[ACTIVE] = @selected_bg_color
 	fg[NORMAL]   = @text_color # Fix for XFCE menu text.
 	fg[PRELIGHT] = @selected_fg_color
 	fg[SELECTED] = @selected_fg_color
+	fg[ACTIVE] = @selected_fg_color
 
 	engine "murrine"
 	{
 		roundness               = 0
-
+		border_shades						= { 1.2, 1.2 }
 	}
 }
 
+style "murrine-separator-menu-item" = "murrine-thin" { }
+
 style "murrine-menubar" { fg[NORMAL] = @fg_color GtkMenuBar :: shadow-type = GTK_SHADOW_NONE }
+
+style "murrine-menubaritem" {
+	bg[NORMAL] = @menubar_bg_color
+	bg[PRELIGHT] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
+	bg[SELECTED] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
+	bg[ACTIVE] = shade (0.9, @menubar_bg_color)
+	bg[INSENSITIVE] = @menubar_bg_color
+
+	fg[NORMAL] = @menubar_fg_color
+	fg[PRELIGHT] = shade (1.08, @menubar_fg_color)
+	fg[SELECTED] = shade (1.08, @menubar_fg_color)
+	fg[ACTIVE] = @menubar_fg_color
+	fg[INSENSITIVE] = mix (0.5, @menubar_bg_color, @menubar_fg_color)
+
+	engine "murrine" {
+		roundness = 0
+	}
+}
 
 style "murrine-notebook" = "murrine-default"
 {
@@ -571,6 +595,9 @@ class "GtkScrollbar"                             style "murrine-scrollbar"
 class "GtkVScrollbar"                            style "murrine-scrollbar"
 class "GtkHScrollbar"                            style "murrine-scrollbar"
 
+class "GtkRadio*" 															 style "murrine-radiocheck"
+class "GtkCheck*"																 style "murrine-radiocheck"
+
 #widget "*ModeButton*"                            style "pixmap-mode-button"
 widget "*ToggleSwitch*"	                          style "murrine-toggleswitch"
 
@@ -594,8 +621,10 @@ widget_class "*<GtkCombo>*"                     style "murrine-combo"
 
 widget_class "*<GtkMenu>*"                      style "murrine-menu"
 widget_class "*<GtkMenuBar>*"                   style "murrine-menubar"
+widget_class "*<GtkMenuBar>*<GtkMenuItem>*"			style "murrine-menubaritem"
 widget_class "*<GtkMenuItem>*"                  style "murrine-menu-item"
 widget_class "*<GtkMenuItem>.*.<GtkScale>"      style "murrine-scale"
+widget_class "*<GtkSeparatorMenuItem>*"					style "murrine-separator-menu-item"
 
 widget_class "*.<GtkFrame>.<GtkLabel>"          style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"                 style "murrine-treeview"
@@ -676,20 +705,36 @@ style "murrine-fg-is-text-color-workaround"
 widget_class "*<GtkListItem>*" 				style "murrine-fg-is-text-color-workaround"
 widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 
+# Google Chrome/Chromium Styles (requires 9.0.597 or newer)
+
+style "chromium-toolbar-button" {
+	engine "murrine" {
+		roundness = 4
+		textstyle = 0
+	}
+}
+
 style "chrome-gtk-frame" {
+	ChromeGtkFrame::frame-color = @bg_color
+	ChromeGtkFrame::inactive-frame-color = @bg_color
 
-    ChromeGtkFrame::frame-color			= shade (0.5, @bg_color)
-    ChromeGtkFrame::inactive-frame-color		= shade (0.5, @bg_color)
+	ChromeGtkFrame::frame-gradient-size = 0
+	ChromeGtkFrame::frame-gradient-color = @bg_color
 
-    ChromeGtkFrame::frame-gradient-size		= 100
-    ChromeGtkFrame::frame-gradient-color		= shade (1.08,@bg_color)
-    ChromeGtkFrame::inactive-frame-gradient-color	= shade (1.08,@bg_color)
+	ChromeGtkFrame::incognito-frame-color = @darker_color
+	ChromeGtkFrame::incognito-inactive-frame-color = @darker_color
 
-    ChromeGtkFrame::scrollbar-trough-color 		= @base_color
-    ChromeGtkFrame::scrollbar-slider-normal-color = "#666666"
+	ChromeGtkFrame::incognito-frame-gradient-size = 0
+	ChromeGtkFrame::incognito-frame-gradient-color = @darker_color
+
+	ChromeGtkFrame::scrollbar-trough-color = @bg_color
+	ChromeGtkFrame::scrollbar-slider-normal-color =  mix (0.21, @fg_color, @bg_color)
+	ChromeGtkFrame::scrollbar-slider-prelight-color =  mix (0.31, @fg_color, @bg_color)
 }
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"
+
+widget_class "*Chrom*Button*" style "chromium-toolbar-button"
 
 ##################################
 # Per-App Styles
