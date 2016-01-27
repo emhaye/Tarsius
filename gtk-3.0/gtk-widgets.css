@@ -2187,7 +2187,7 @@ GtkTreeMenu .menuitem {
 }
 
 .context-menu {
-    font: SNFS Display Thin 11px;
+    font: SNFS Display Thin 10px;
     text-shadow: none;
 }
 
@@ -3281,7 +3281,7 @@ GtkListBox,
     background-color: shade (@titlebar_color, 1.04);
     color: #2d2d2d;
     -gtk-icon-style: symbolic;
-    font: SNFS Display Thin 12;
+    font: SNFS Display Thin 11;
     text-shadow: 0 1px alpha (#fff, 0.2);
     icon-shadow: 0 1px alpha (#fff, 0.0);
 }
@@ -3956,7 +3956,7 @@ background-position: center;
     box-shadow: 0 0 0 1px alpha (#000, 0.15),
                 0 12px 30px -6px alpha (#000, 0.80);
 
-    margin: 1px;
+    margin: 10px;
 }
 
 .window-frame.menu.csd,
