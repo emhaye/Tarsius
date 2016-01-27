@@ -231,7 +231,7 @@ GraniteWidgetsThinPaned {
                                   @base_color
                                   );
 
-    border: transparent;
+    border: 1px solid alpha (#000, 0.1);
     border-radius: 4px;
 
     box-shadow: 0 1px 0 0 alpha (#000, 0.15);
@@ -259,8 +259,8 @@ GtkHandleBox .entry,
                                   @base_color,
                                   @base_color
                                   );
-
-    border-color:transparent;
+    padding: 2px;
+    border-color:white;
     box-shadow: 0 1px 0 0 alpha (#000, 0.15);
 }
 
@@ -833,7 +833,7 @@ GtkScrolledWindow GtkViewport.frame {
 .button.menuitem.menubar,
 GtkColorButton.button,
 GtkComboBox.combobox-entry .button {
-    padding: 3px 7px;
+    padding: 2px 6px;
     -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
     -GtkButton-default-border: 0;
@@ -844,24 +844,17 @@ GtkComboBox.combobox-entry .button {
 .header-bar .button.image-button,
 .button,
 .action-bar .button.text-button {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (#fff, 0.2);
+    icon-shadow: 0 1px alpha (#fff, 0.2);
 
     background-image: linear-gradient(to bottom,
                                   white,
                                   white
                                   );
-
     border: 1px solid alpha (#000, 0.1);
     border-radius: 4px;
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#000, 0.05);
-
+    box-shadow: 0 1px 0 0 alpha (#000, 0.05);
     color: @text_color;
-
     transition: all 100ms ease-in;
 }
 
@@ -875,6 +868,8 @@ GtkComboBox.combobox-entry .button {
 .titlebar .button {
     color: shade (@textColorPrimary, 0.8);
     border-color: transparent;
+    border-bottom-color: white;
+    border-top-color: white;
 
     /* FIXME: causes problems with files pathbar */
     /*box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.05),
@@ -894,7 +889,7 @@ box-shadow:none;
 .header-bar .button.image-button .linked,
 .header-bar .button.image-button,
 .header-bar .linked .button{
-    padding: 2px 7px;
+    padding: 2px 6px;
 
 }
 
@@ -972,42 +967,27 @@ box-shadow:none;
                 0 1px 0 0 alpha (#fff, 0.30);
 }*/
 
-
-MarlinViewWindow  .marlin-pathbar.button {
-border-color:   alpha (#000, 0.1);
-border-bottom-color:transparent;
-
-}
-MarlinViewWindow  .marlin-pathbar.button:active {
-border-color:   alpha (#000, 0.1);
-border-bottom-color:transparent;
-background-color: shade (@bg_color, 0.8);
-
-}
-
-MarlinViewWindow  .marlin-pathbar.button:backdrop {
-
-border: 1px solid alpha (#000, 0.2);
-color: shade (@textColorPrimary, 0.8);
-box-shadow:none;
-
-}
-.header-bar .linked .button.image-button:backdrop,
-.header-bar .button.image-button .linked:backdrop,
-
+.titlebar .linked .button.image-button:focus:checked:backdrop GtkImage,
+.titlebar .button.image-button .linked:focus:checked:backdrop GtkImage,
+.titlebar .linked .button.image-button:hover:checked:backdrop GtkImage,
+.titlebar .button.image-button .linked:hover:checked:backdrop GtkImage,
+.titlebar .linked .button.image-button:backdrop,
+.titlebar .button.image-button .linked:backdrop, 
 .titlebar .button:active:backdrop ,
 .titlebar .button:hover:active:backdrop ,
 .titlebar .button:focus:active:backdrop ,
 .titlebar .button:checked:backdrop ,
 .titlebar .button:hover:checked:backdrop ,
 .titlebar .button:focus:checked:backdrop  {
-  background-color: transparent;
-       background-image: none;
+    background-color: transparent;
+    background-image: none;
     border: 1px solid alpha (#000, 0.2);
     color: shade (@textColorPrimary, 0.9);
-box-shadow:none;
-
+    text-shadow: 0 1px alpha (#fff, 0.1);
+    icon-shadow: 0 1px alpha (#fff, 0.1);
+    box-shadow:none;
 }
+
 .header-bar .linked .button.image-button:focus:checked:backdrop,
 .header-bar .button.image-button .linked:focus:checked:backdrop,
 .header-bar .linked .button.image-button:focus:active:backdrop,
@@ -1020,7 +1000,6 @@ box-shadow:none;
 .header-bar .button.image-button .linked:checked:backdrop,
 .header-bar .linked .button.image-button:active:backdrop,
 .header-bar .button.image-button .linked:active:backdrop,
-
 .header-bar .button:active:backdrop ,
 .header-bar .button:hover:active:backdrop ,
 .header-bar .button:focus:active:backdrop ,
@@ -1028,45 +1007,38 @@ box-shadow:none;
 .header-bar .button:hover:checked:backdrop ,
 .header-bar .button:focus:checked:backdrop   {
     background-color: alpha(#575757, 0.3);
-         background-image: none;
-
-
-text-shadow: 0 1px alpha (#fff, 0.1);
+    background-image: none;
+    border: 1px solid alpha (#000, 0.2);
+    color: shade (@textColorPrimary, 0.9);
+    text-shadow: 0 1px alpha (#fff, 0.1);
     icon-shadow: 0 1px alpha (#fff, 0.1);
-
-box-shadow:none;
-
-
+    box-shadow:none;
 }
 
-
-.header-bar .linked .button.image-button:focus:checked GtkImage,
-.header-bar .button.image-button .linked:focus:checked GtkImage,
-.header-bar .linked .button.image-button:focus:active GtkImage,
-.header-bar .button.image-button .linked:focus:active GtkImage,
-.header-bar .linked .button.image-button:hover:checked GtkImage,
-.header-bar .button.image-button .linked:hover:checked GtkImage,
-.header-bar .linked .button.image-button:hover:active GtkImage,
-.header-bar .button.image-button .linked:hover:active GtkImage,
-
-.header-bar .linked .button.image-button:checked GtkImage,
-.header-bar .button.image-button .linked:checked GtkImage,
-.header-bar .linked .button.image-button:active GtkImage,
-.header-bar .button.image-button .linked:active GtkImage,
+.titlebar .linked .button.image-button:focus:active GtkImage,
+.titlebar .button.image-button .linked:focus:active GtkImage,
+.titlebar .linked .button.image-button:hover:active GtkImage,
+.titlebar .button.image-button .linked:hover:active GtkImage,
+.titlebar .linked .button.image-button:active GtkImage,
+.titlebar .button.image-button .linked:active GtkImage,
 .titlebar .button:active,
 .titlebar .button:hover:active,
 .titlebar .button:focus:active,
+.titlebar .linked .button.image-button:focus:checked GtkImage,
+.titlebar .button.image-button .linked:focus:checked GtkImage,
+.titlebar .linked .button.image-button:hover:checked GtkImage,
+.titlebar .button.image-button .linked:hover:checked GtkImage,
+.titlebar .linked .button.image-button:checked GtkImage,
+.titlebar .button.image-button .linked:checked GtkImage,
 .titlebar .button:checked,
 .titlebar .button:hover:checked,
 .titlebar .button:focus:checked  {
-
-    border-color: transparent;
-    border-bottom-color: alpha (#000, 0.3);
+    border-color:#6d6b6d;
     color: #fff;
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
-
 }
+
 .header-bar .linked .button.image-button:focus:checked,
 .header-bar .button.image-button .linked:focus:checked,
 .header-bar .linked .button.image-button:focus:active,
@@ -1075,7 +1047,6 @@ box-shadow:none;
 .header-bar .button.image-button .linked:hover:checked,
 .header-bar .linked .button.image-button:hover:active,
 .header-bar .button.image-button .linked:hover:active,
-
 .header-bar .linked .button.image-button:checked,
 .header-bar .button.image-button .linked:checked,
 .header-bar .linked .button.image-button:active,
@@ -1094,9 +1065,8 @@ box-shadow:none;
 .header-bar .button:focus:checked  {
     background-color: #6d6b6d;
     background-image: none;
-
-
-box-shadow:   0 1px 0 0 alpha (#000, 0.05);
+    border-color:#6d6b6d;
+    box-shadow:   0 1px 0 0 alpha (#000, 0.05);
 }
 
 GtkDialog .button.flat.image-button,
@@ -1653,7 +1623,7 @@ box-shadow:none;
 .linked.vertical .button:insensitive:only-child {
     border-top-width: 1px;
     border-bottom-width: 1px;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 /********************
@@ -1671,7 +1641,6 @@ box-shadow:none;
 -GtkWidget-focus-line-width: 0;
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
-
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
     border: 1px solid shade (@titlebar_color, 0.70);
@@ -1685,164 +1654,127 @@ box-shadow:none;
                                   @bg_color,
                                   @bg_color
                                   );
-
-
 }
-
-
-
 
 .notebook.header.bottom,
 .notebook.header,
 .dynamic-notebook .notebook.header {
-background-image:
-                  linear-gradient(to bottom,
-                              alpha (shade(@titlebar_color, 0.85), 0.98),
-                              alpha (shade(@titlebar_color, 0.8), 0.98)
+    background-image: linear-gradient(to bottom,
+                              alpha (shade(@titlebar_color, 0.87), 0.99),
+                              alpha (shade(@titlebar_color, 0.82), 0.99)
                               );
-border-style: solid;
-border-width: 0 0 1px 0;
-border-color: shade (@titlebar_color, 0.6);
-border-radius: 0;
-
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: shade (@titlebar_color, 0.6);
+    border-radius: 0;
 }
 
 .notebook.header:backdrop,
 .dynamic-notebook .notebook.header:backdrop {
-background-color: shade (@titlebar_color, 1.09);
-background-image: linear-gradient(to bottom,
+    background-color: shade (@titlebar_color, 1.09);
+    background-image: linear-gradient(to bottom,
                               alpha (#000, 0.01),
                               alpha (#000, 0.00) 3px
                               );
-
-border-color: shade (@titlebar_color, 0.80);
+    border-color: shade (@titlebar_color, 0.80);
 }
-
 
 .notebook,
 .dynamic-notebook .notebook {
--GtkNotebook-tab-overlap: 1px;
-border-width: 0;
+    -GtkNotebook-tab-overlap: 1px;
+    border-width: 0;
 }
-
 
 .notebook GtkImage,
 .dynamic-notebook GtkImage {
-color: shade (@title_color, 0.75);
+    color: shade (@title_color, 0.75);
 }
 
 .notebook GtkImage:insensitive,
 .dynamic-notebook GtkImage:insensitive {
-color: @insensitive_color;
+    color: @insensitive_color;
 }
-
-
 
 .notebook tab.right,
 .notebook tab.left {
     background-color: @bg_color;
     color: shade (@text_color, 1.12);
-padding: 2px;
-border: none;
-      border-radius: 2px 0 0 2px;
-
-
+    padding: 2px;
+    border: none;
+    border-radius: 2px 0 0 2px;
 }
-
 
 .notebook tab.bottom,
 .notebook tab.top {
-padding: 2px 18px;
-
-border-radius: 0;
-
-background-image: none;
-background-color: transparent;
-
-border-width: 0 1px 0 0;
-
-border-image: linear-gradient(to bottom,
+    padding: 2px 15px;
+    border-radius: 0;
+    background-image: none;
+    background-color: transparent;
+    border-width: 0 1px 0 0;
+    border-image: linear-gradient(to bottom,
                               alpha (#000, 0.20),
                               alpha (#000, 0.20)
                               ) 0 1 0 0;
-
 }
 
 .dynamic-notebook .notebook tab {
-padding: 4px ;
-
-border-radius: 0;
-
-background-image: none;
-background-color: transparent;
-
-border-width: 0 1px 0 0;
-
-border-image: linear-gradient(to bottom,
+    padding: 4px ;
+    border-radius: 0;
+    background-image: none;
+    background-color: transparent;
+    border-width: 0 1px 0 0;
+    border-image: linear-gradient(to bottom,
                               alpha (#000, 0.20),
                               alpha (#000, 0.20)
                               ) 0 1 0 0;
-
 }
-
 
 .notebook tab > GtkImage,
 .dynamic-notebook .notebook tab > GtkImage {
-color: shade (@titlebar_color, 0.35);
+    color: shade (@titlebar_color, 0.35);
 }
+
 .notebook tab:nth-child(first),
 .dynamic-notebook .notebook tab:nth-child(first) {
-border-width: 0 1px 0 1px;
-border-image: linear-gradient(to bottom,
+    border-width: 0 1px 0 1px;
+    border-image: linear-gradient(to bottom,
                               alpha (#000, 0.20),
                               alpha (#000, 0.20)
                               ) 0 1 0 0;
 }
 
 .notebook tab.reorderable-page:active{
-
-                   background-image: linear-gradient(to bottom,
-                                                 alpha (@titlebar_color, 0.88),
-                                                 alpha (@titlebar_color, 0.84)
-                                                 );
-
-
-                   text-shadow: 0 1px alpha (#fff, 0.4);
-                   icon-shadow: 0 1px alpha (#fff, 0.4);
-
-                   box-shadow: inset 0 0 0 1px alpha (#fff, 0),
-                               0 0 1px 1px alpha (#000, 0.02);
-
-                   border-image: none;
-
-
-                    border: 1px solid shade (@titlebar_color, 0.70);
-                    border-bottom-width: 0px;
-                    border-top-width: 0px;
-                    color: @text_color;
-                }
-
-
- .notebook tab:active.right,
-  .notebook tab:active.left{
-
-        background-image: linear-gradient(to bottom,
-                                      shade (@titlebar_color, 1.1),
-                                      shade (@titlebar_color, 1.1)
-                                      );
-    border: 1px solid shade (@titlebar_color, 0.60);
-    border-right-width:0px;
-
+    background-image: linear-gradient(to bottom,
+                               alpha (@titlebar_color, 0.88),
+                               alpha (@titlebar_color, 0.84)
+                               );
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0),
+                0 0 1px 1px alpha (#000, 0.02);
+    border-image: none;
+    border: 1px solid shade (@titlebar_color, 0.70);
+    border-bottom-width: 0px;
+    border-top-width: 0px;
     color: @text_color;
 }
 
+ .notebook tab:active.right,
+  .notebook tab:active.left{
+    background-image: linear-gradient(to bottom,
+                               shade (@titlebar_color, 1.1),
+                               shade (@titlebar_color, 1.1)
+                               );
+    border: 1px solid shade (@titlebar_color, 0.60);
+    border-right-width:0px;
+    color: @text_color;
+}
 
  .notebook tab:active{
-
-        background-image: linear-gradient(to bottom,
-                                      shade (@titlebar_color, 1.1),
-                                      shade (@titlebar_color, 1.1)
-                                      );
+    background-image: linear-gradient(to bottom,
+                               shade (@titlebar_color, 1.1),
+                               shade (@titlebar_color, 1.1)
+                               );
     border: 1px solid shade (@titlebar_color, 0.6);
     border-bottom-width: 0px;
     border-top-width: 0px;
@@ -1850,93 +1782,79 @@ border-image: linear-gradient(to bottom,
 }
 
 .notebook tab.bottom:active{
-
-       background-image: linear-gradient(to bottom,
-                                     shade (@titlebar_color, 1.03),
-                                     shade (@titlebar_color, 1)
-                                     );
+    background-image: linear-gradient(to bottom,
+                               shade (@titlebar_color, 1.03),
+                               shade (@titlebar_color, 1)
+                               );
     border: 1px solid shade (@titlebar_color, 0.6);
     border-bottom-width: 1px;
     border-top-width: 0px;
     color: @text_color;
 }
 
-
-
 .dynamic-notebook .notebook tab:active {
-background-image: linear-gradient(to bottom,
-                              alpha (@titlebar_color, 0.6),
-                              alpha (@titlebar_color, 0.6)
-                              );
-border-color: shade (@titlebar_color, 0.6);
-border-radius: 0px;
-border-style: solid;
-border-width: 0 1px  1px;
-
-text-shadow: 0 1px alpha (#fff, 0.4);
-icon-shadow: 0 1px alpha (#fff, 0.4);
-
-box-shadow: inset 0 0 0 1px alpha (#fff, 0),
-            0 0 1px 1px alpha (#000, 0.02);
-
-border-image: none;
-
-color: @text_color;
+    background-image: linear-gradient(to bottom,
+                               alpha (@titlebar_color, 0.6),
+                               alpha (@titlebar_color, 0.6)
+                               );
+    border-color: shade (@titlebar_color, 0.6);
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 0 1px  1px;
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0),
+                0 0 1px 1px alpha (#000, 0.02);
+    border-image: none;
+    color: @text_color;
 }
+
 .notebook tab.reorderable-page:active:backdrop,
 .dynamic-notebook .notebook tab:active:backdrop {
-background-image: linear-gradient(to bottom,
-                              shade (@titlebar_color, 1.04),
-                              shade (@titlebar_color, 1.04)
-                              );
-border-color: shade (@titlebar_color, 0.75);
-box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
-            0 0 0 1px alpha (#000, 0.01);
+    background-image: linear-gradient(to bottom,
+                               shade (@titlebar_color, 1.04),
+                               shade (@titlebar_color, 1.04)
+                               );
+    border-color: shade (@titlebar_color, 0.75);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
+                0 0 0 1px alpha (#000, 0.01);
 }
 
 .notebook.header {
-border: none;
-background-color: transparent;
+    border: none;
+    background-color: transparent;
 }
-
 
 .notebook.bottom {
-border-radius: 0px;
--GtkNotebook-initial-gap: 4;
--GtkNotebook-arrow-spacing: 5;
--GtkNotebook-tab-curvature: 0;
--GtkNotebook-tab-overlap: 1;
--GtkNotebook-has-tab-gap: false;
--GtkWidget-focus-padding: 0;
--GtkWidget-focus-line-width: 0;
-
-background-clip: border-box;
-background-color: shade (@titlebar_color, 1.06);
-
-text-shadow: 0 1px alpha (#fff, 0.4);
-icon-shadow: 0 1px alpha (#fff, 0.4);
-
-border-bottom: 1px solid shade (@titlebar_color, 0.60);
-
+    border-radius: 0px;
+    -GtkNotebook-initial-gap: 4;
+    -GtkNotebook-arrow-spacing: 5;
+    -GtkNotebook-tab-curvature: 0;
+    -GtkNotebook-tab-overlap: 1;
+    -GtkNotebook-has-tab-gap: false;
+    -GtkWidget-focus-padding: 0;
+    -GtkWidget-focus-line-width: 0;
+    background-clip: border-box;
+    background-color: shade (@titlebar_color, 1.06);
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+    border-bottom: 1px solid shade (@titlebar_color, 0.60);
 }
+
 .notebook {
-border-radius: 0px;
--GtkNotebook-initial-gap: 4;
--GtkNotebook-arrow-spacing: 5;
--GtkNotebook-tab-curvature: 0;
--GtkNotebook-tab-overlap: 1;
--GtkNotebook-has-tab-gap: false;
--GtkWidget-focus-padding: 0;
--GtkWidget-focus-line-width: 0;
-
-background-clip: border-box;
-background-color: shade (@titlebar_color, 1.06);
-
-text-shadow: 0 1px alpha (#fff, 0.4);
-icon-shadow: 0 1px alpha (#fff, 0.4);
-
-border: 1px solid shade (@titlebar_color, 0.60);
-
+    border-radius: 0px;
+    -GtkNotebook-initial-gap: 4;
+    -GtkNotebook-arrow-spacing: 5;
+    -GtkNotebook-tab-curvature: 0;
+    -GtkNotebook-tab-overlap: 1;
+    -GtkNotebook-has-tab-gap: false;
+    -GtkWidget-focus-padding: 0;
+    -GtkWidget-focus-line-width: 0;
+    background-clip: border-box;
+    background-color: shade (@titlebar_color, 1.06);
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+    border: 1px solid shade (@titlebar_color, 0.60);
 }
 
 .notebook.frame {
@@ -1944,36 +1862,36 @@ border: 1px solid shade (@titlebar_color, 0.60);
 }
 
 .notebook GtkViewport {
-background-color: @base_color;
-
-
+    background-color: @base_color;
 }
 
 .dynamic-notebook .notebook tab > .entry {
-border-radius: 2px;
-padding: 0px 4px;
+    border-radius: 2px;
+    padding: 0px 4px;
 }
 
 .notebook tab > .entry {
-border-radius: 2px;
-padding: 1px 4px;
+    border-radius: 2px;
+    padding: 1px 4px;
 }
 
-    .notebook tab .button {
+.notebook tab .button {
     border:none;
-color:transparent;
+    color:transparent;
     box-shadow:none;
-background-color: transparent;
-background-image:none;
+    background-color: transparent;
+    background-image:none;
     -gtk-icon-style: symbolic;
 }
-    .notebook tab .button:hover {
+
+.notebook tab .button:hover {
     border:none;
-color:@text_color;
+    color:@text_color;
     box-shadow:none;
-background-color: transparent;
+    background-color: transparent;
     -gtk-icon-style: symbolic;
 }
+
 /*Label Trickery*/
 
 .notebook tab GtkLabel {
@@ -2216,6 +2134,12 @@ GtkTreeMenu .menuitem {
     -GtkWidget-window-dragging: true;
 }
 
+.menubar:backdrop {
+    color: @text_color;
+    background-color:shade( @titlebar_color, 1.1);
+    -GtkWidget-window-dragging: true;
+}
+
 .menubar .menuitem {
     padding: 2px 5px;
 
@@ -2399,50 +2323,38 @@ GtkCheckButton:selected:focus {
 GtkHandleBox,
 .toolbar {
     -GtkWidget-window-dragging: true;
-
     padding:3px;
-
     border: 1px solid shade (@titlebar_color, 0.56);
     border-width: 0 0 1px 0;
-
     box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.20);
-
     background-image: linear-gradient(to bottom,
                                   @titlebar_color,
-                                  shade (@titlebar_color, 0.95)
+                                  shade (@titlebar_color, 0.98)
                                   );
-
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
+
 .toolbar.bottom {
     -GtkWidget-window-dragging: true;
-
     padding: 0 2px 2px;
-
     border-top: 1px solid shade (@titlebar_color, 0.76);
-
-
-
-
     background-image: linear-gradient(to bottom,
                                   @bg_color,
                                   shade (@bg_color, 0.95)
                                   );
-
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
+
 GtkHandleBox:backdrop,
 .toolbar:backdrop {
     background-image: linear-gradient(to bottom,
-                              @titlebar_color,
-                              shade (@titlebar_color, 0.98)
-                              );
-    border-color: shade (@titlebar_color, 0.64);
-
+                               shade (@titlebar_color, 1.1),
+                               shade (@titlebar_color, 1.1)
+                               );
+    border-color: shade (@titlebar_color, 0.78);
     box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.40);
-
     -gtk-image-effect: dim;
 }
 
@@ -2502,15 +2414,13 @@ GtkHandleBox:backdrop,
 
 .bottom-toolbar.toolbar {
     padding: 7px;
-
-    border: 1px solid shade (@titlebar_color, 0.66);
+    border-radius: 0 0 6px 6px ;
+    border: 1px solid shade (@titlebar_color, 0.7);
     border-width: 1px 0 0 0;
-
     background-image: linear-gradient(to bottom,
-                                  @titlebar_color,
-                                  shade (@titlebar_color, 0.88)
-                                  );
-
+                                alpha(@titlebar_color, 0.5),
+                                alpha( shade (@titlebar_color,1),0.5)
+                                );
     box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.50),
                 inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.20);
 }
@@ -2764,9 +2674,10 @@ GtkAppChooserDialog .search-bar {
 **************************/
 
 .suggested-action.button {
-  background-color: #6d6b6d;
-  background-image: none;
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.02);
+    background-color: #6d6b6d;
+    background-image: none;
+    border-color: shade (#6d6b6d, 0.95);
+    box-shadow: 0 1px 0 0 alpha (#000, 0.15);
 }
 
 GtkOverlay .suggested-action.button {
@@ -3160,8 +3071,8 @@ column-header:nth-child(first) .button:backdrop,
 column-header .button,
 column-header .button:backdrop {
     background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 1),
-                                  @base_color
+                                  shade (@base_color, 0.95),
+                                  shade (@base_color, 0.95)
                                   );
 
     border-image: linear-gradient(to bottom,
@@ -3170,26 +3081,16 @@ column-header .button:backdrop {
                                   ) 0 0 1 1;
     border-width: 0 0 1px 1px;
     font: bold;
-    padding: 3px 1px 3px 1px;
+    padding: 3px 1px 1px;
     color: shade(@text_color, 1.5);
 }
 
-column-header .button:backdrop {
-    background-image: none;
-    background-color: @bg_color;
-}
-
+column-header .button:hover:backdrop,
+column-header .button:active,
 column-header .button:hover {
     background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.80),
+                                  shade (@base_color, 1),
                                   @base_color
-                                  );
-}
-
-column-header .button:hover:backdrop {
-    background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.92),
-                                  @bg_color
                                   );
 }
 
@@ -3785,20 +3686,17 @@ GcrCertificateWidget .frame {
 
 .titlebar {
     background-image: linear-gradient(to bottom,
-                                  alpha (shade(@colorPrimary,1.06), 0.94),
-                                  alpha (shade(@colorPrimary,0.95), 1)
+                                  alpha (shade(@colorPrimary,1.03), 0.97),
+                                  alpha (shade(@colorPrimary,0.93), 1)
                                   );
-    border-color: shade (@colorPrimary, 0.69);
+    border-color: shade (@colorPrimary, 0.65);
     border-radius: 6px 6px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
-
     text-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.40);
     icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.40);
-
-    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.1), 0.10),
-                inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.1), 0.50);
-
+    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.1), 0.05),
+                inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.1), 0.20);
     padding: 0px 8px 0px;
 }
 
@@ -3809,9 +3707,7 @@ GcrCertificateWidget .frame {
                               );
     background-color: shade (@colorPrimary, 1.10);
     border-color: shade (@colorPrimary, 0.9);
-
     box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.10);
-
     -gtk-image-effect: dim;
 }
 
@@ -3820,9 +3716,7 @@ GcrCertificateWidget .frame {
 }
 
 .header-bar:last-child {
-    border-left-width: 1px ;
     border-radius: 0 6px 0 0;
-    border-left-color: shade (@colorPrimary, 0.76);
 }
 
 .maximized .header-bar,
@@ -3835,23 +3729,27 @@ GcrCertificateWidget .frame {
     border-radius: 0;
 }
 
+.titlebar.compact {
+    padding: 0 8px 0;
+}
+
 .titlebar.default-decoration {
-    padding: 0px 8px 0px;
+    padding: 0 8px 0;
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 1),
                                    shade (@titlebar_color, 0.95)
                                   );
     border-width: 0 0 1px;
 
-    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.1), 0.10),
+    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.1), 0.05),
                 inset 0 1px 0 0 alpha (@bg_highlight_color, 0.20);
 }
 
 .titlebar.default-decoration:backdrop {
-    padding: 0px 8px 0px;
+    padding: 0 8px 0;
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1),
-                                   @titlebar_color
+                                  shade (@titlebar_color, 1.1),
+                                  shade (@titlebar_color, 1.1)
                                   );
     border-width: 0 0 1px;
 
@@ -3902,14 +3800,12 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar.default-decoration .titlebar .titlebutton:backdrop,
 .titlebar.default-decoration .titlebar .titlebutton {
     background: transparent;
-    padding: 1px 0px 1px 0px;
+    padding: 2px 0px 2px 0px;
     color: transparent;
-    border-radius: 3px;
-    border-width: 1px;
     border-image: none;
     box-shadow: none;
-background-position: center;
-	background-repeat: no-repeat;
+    background-position: center;
+	  background-repeat: no-repeat;
 }
 
 .header-bar .titlebutton,
@@ -3921,15 +3817,13 @@ GtkDialog .header-bar .titlebutton GtkImage:backdrop,
 .titlebar .titlebutton:backdrop,
 .titlebar .titlebutton {
     background: none;
-    padding: 3px 0px 3px 0px;
+    padding: 2px 0px 2px 0px;
     color: transparent;
-    border-radius: 3px;
-    border-width: 1px;
     border-style: none;
     border-image: none;
     box-shadow: none;
-background-position: center;
-	background-repeat: no-repeat;
+    background-position: center;
+	  background-repeat: no-repeat;
 }
 
 .titlebar .title:insensitive,
