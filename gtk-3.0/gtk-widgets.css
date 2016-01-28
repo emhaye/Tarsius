@@ -1833,11 +1833,10 @@ GtkOverlay .linked .button:insensitive:last-child {
     background-color: shade (@titlebar_color, 1.06);
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-    border: 1px solid shade (@titlebar_color, 0.60);
 }
 
 .notebook.frame {
-/*FIXME: Move the border down here so devs have more control*/
+  border-width: 1px;
 }
 
 .notebook GtkViewport {
@@ -3822,6 +3821,10 @@ GtkDialog .header-bar .titlebutton GtkImage:backdrop,
     text-shadow: none;
     icon-shadow: none;
 }
+
+/**************
+ ! Window frame
+***************/
 
 .window-frame {
     border-radius: 6px;
