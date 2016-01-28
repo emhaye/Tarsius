@@ -907,7 +907,8 @@ GtkComboBox.combobox-entry .button {
 
 .location-bar .button,
 .button.flat,
-.button.flat:backdrop {
+.button.flat:backdrop,
+.button.flat:focus {
     border:none;
     border-color: transparent;
     box-shadow: none;
@@ -915,12 +916,11 @@ GtkComboBox.combobox-entry .button {
     background-color: transparent;
 }
 
-.button.flat:focus,
 .button.flat:focus:hover {
-    background-color: @selected_bg_color;
-    color: #fff;
-    text-shadow: 0 1px alpha (#000, 0.2);
-    icon-shadow: 0 1px alpha (#000, 0.0);
+  background-color: @selected_bg_color;
+  color: #fff;
+  text-shadow: 0 1px alpha (#000, 0.2);
+  icon-shadow: 0 1px alpha (#000, 0.0);  
 }
 
 /* FIXME: style for checked image buttons*
