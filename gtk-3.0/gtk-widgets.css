@@ -1664,6 +1664,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 .dynamic-notebook .notebook {
     -GtkNotebook-tab-overlap: 1px;
     border-width: 0;
+    padding: 1px 0 0 0;
 }
 
 .notebook GtkImage,
@@ -1680,14 +1681,14 @@ GtkOverlay .linked .button:insensitive:last-child {
 .notebook tab.left {
     background-color: @bg_color;
     color: shade (@text_color, 1.12);
-    padding: 2px;
+    padding:1px;
     border: none;
     border-radius: 2px 0 0 2px;
 }
 
 .notebook tab.bottom,
 .notebook tab.top {
-    padding: 2px 15px;
+    padding: 1px 15px;
     border-radius: 0;
     background-image: none;
     background-color: transparent;
@@ -1698,8 +1699,9 @@ GtkOverlay .linked .button:insensitive:last-child {
                               ) 0 1 0 0;
 }
 
+.notebook tab,
 .dynamic-notebook .notebook tab {
-    padding: 4px ;
+    padding: 1px 2px 0 2px;
     border-radius: 0;
     background-image: none;
     background-color: transparent;
