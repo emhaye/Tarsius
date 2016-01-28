@@ -84,5 +84,11 @@
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
 
+/* osd */
+@define-color osd_base #333;
+@define-color osd_fg #eee;
+@define-color osd_bg alpha(shade(@osd_base, 0.8), 0.8);
+
+
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-window-controls.css");
