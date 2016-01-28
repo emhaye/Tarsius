@@ -100,5 +100,9 @@
 @define-color dark_shadow #000000;
 @define-color win_shadow @light_shadow;
 
+/*entry matter addition*/
+@define-color selected_entry_bg alpha(@selected_bg_color,0.3);
+@define-color selected_fg @theme_fg_color;
+
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-window-controls.css");
