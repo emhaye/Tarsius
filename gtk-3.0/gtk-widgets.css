@@ -1079,7 +1079,9 @@ GtkDialog .button.flat.image-button:hover {
     background-color: #6d6b6d;
     background-image: none;
     border-color: alpha (#000, 0.2);
-    color: @text_color;
+    color: @base_color;
+    text-shadow: 0 1px alpha (#000, 0.4);
+    icon-shadow: 0 1px alpha (#000, 0.4);
     box-shadow: 0 1px 0 0 alpha (#000, 0.05);
 }
 
