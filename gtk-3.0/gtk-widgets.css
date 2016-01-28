@@ -3124,7 +3124,8 @@ GtkListBox,
     background-color: transparent;
 }
 
-.list-row:selected {
+.list-row:selected,
+.list-row:selected:hover {
     background-color: @colorAccent;
     icon-shadow: none;
     text-shadow: none;
