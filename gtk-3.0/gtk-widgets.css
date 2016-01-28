@@ -3540,6 +3540,7 @@ GraniteWidgetsPopOver .button:hover:active {
     border-color: shade (@base_color, 0.74);
 }
 
+GtkPopover,
 .popover,
 .popover.osd,
 .popover_bg {
@@ -3552,6 +3553,41 @@ GraniteWidgetsPopOver .button:hover:active {
                 0 3px 6px alpha (#000, 0.23);
     margin: 10px 6px;
     text-shadow: none;
+}
+
+.popover > .list, 
+.popover > .view, 
+.popover > .toolbar .popover.osd > .toolbar, 
+.popover > .inline-toolbar .popover.osd > .toolbar, 
+.popover > .search-bar .popover.osd > .toolbar, 
+.popover > .location-bar .popover.osd > .toolbar,
+.popover > .toolbar .popover.osd > .inline-toolbar, 
+.popover > .inline-toolbar .popover.osd > .inline-toolbar, 
+.popover > .search-bar .popover.osd > .inline-toolbar, 
+.popover > .location-bar .popover.osd > .inline-toolbar,
+.popover > .toolbar .popover.osd > .search-bar, 
+.popover > .inline-toolbar .popover.osd > .search-bar, 
+.popover > .search-bar .popover.osd > .search-bar,
+.popover > .location-bar .popover.osd > .search-bar,
+.popover > .toolbar .popover.osd > .location-bar,
+.popover > .inline-toolbar .popover.osd > .location-bar, 
+.popover > .search-bar .popover.osd > .location-bar, 
+.popover > .location-bar .popover.osd > .location-bar {
+	border-style: none;
+	background-image: none;
+	background-color: transparent;
+}
+
+/*subjudul menu*/
+.popover .label.separator {
+	font-size: 140%;
+	font-weight: normal;
+	color: shade(@theme_fg_color,1.2);
+	text-shadow: none;
+	background-color: transparent;
+	icon-shadow: none;
+  padding-bottom: 4px;
+	border: 0;
 }
 
 .popover GtkImage {
@@ -3604,7 +3640,9 @@ GtkModelButton.button {
   transition: all 100ms ease-in;
 }
   
-.popover .separator {
+.popover .separator,
+.popover GtkPlacesSidebar.sidebar .view.separator,
+GtkPlacesSidebar.sidebar .popover .view.separator {
     font-size: 80%;
     font-weight: bold;
     color: @menu_separator;
@@ -3633,16 +3671,6 @@ GtkModelButton.button:selected {
     color: @selected_fg_color;
 }
 
-.popover > .location-bar,
-.popover.osd > .toolbar,
-.popover.osd > .inline-toolbar,
-.popover.osd > .search-bar,
-.popover.osd > .location-bar {
-    border-style: none;
-    background-image: none;
-    background-color: transparent;
-}
-
 .popover .action-bar {
     background-image: none;
     padding: 5px;
@@ -3652,6 +3680,77 @@ GtkModelButton.button:selected {
 .popover .action-bar .button {
     padding: 2px 5px;
 }
+
+/*properti tombol pada menu popover*/
+.popover .linked .button {
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: shade(@bg_color, 0.9);
+    border-right-color: shade(@bg_color, 0.8);
+    border-left-color: shade(@bg_color, 0.8);
+    border-bottom-color: shade(@bg_color, 0.7);
+    background-image: none;
+    background-color: @base_color;
+    color: @theme_fg_color;
+    box-shadow: none;
+    padding: 0px;
+}
+
+.popover .list {
+	background-color: @theme_base_color;
+}
+
+.popover .linked .button:first-child {
+    padding-top:0px;
+    border-right-width: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0px;
+}
+
+.popover .linked .button:last-child {
+    border-left-width: 0px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 0px;
+}
+
+.popover .linked .button:hover{
+    background-color: @base_color;
+    background-image: none;
+    box-shadow: none;
+    color: @theme_fg_color;
+}
+
+/*pengaruhi tombol View option nautilus; status AKTIF*/
+.popover .linked .button:checked,
+.popover .linked .button:checked:hover {
+    color: @selected_fg_color;
+    border: 0 none;
+    background-image: none;
+    background-color: #6d6b6d;
+}
+
+.popover .linked .button:active,
+.popover .linked .button:active:hover {
+    box-shadow: none;
+}
+
+/*list menu popover*/
+.popover .button.flat {
+     border: 0px;}
+.popover .button.flat:checked {
+     background-color:transparent;
+     background-image:none;
+	box-shadow: none;
+     color:@theme_fg_color}
+
+.popover .button.flat:hover {
+	background-image: none;
+	background-color: @theme_selected_bg_color; /*pengaruhi floating-edit-tool Notes*/
+	color: @theme_selected_fg_color;}
 
 GcrCertificateWidget .frame {
     border: none;

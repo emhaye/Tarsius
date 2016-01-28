@@ -43,7 +43,7 @@
 @define-color title_shadow_color alpha (#fff, 0.6);
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #FFF;
-
+@define-color popover_bg_color #fefefe;
 @define-color internal_element_color mix(@text_color, @base_color, 0.4);
 @define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
 @define-color internal_element_insensitive mix(@internal_element_color, @base_color, 0.7);
@@ -89,6 +89,16 @@
 @define-color osd_fg #eee;
 @define-color osd_bg alpha(shade(@osd_base, 0.8), 0.8);
 
+/* button colors */
+@define-color button_border_top #589af7;
+@define-color button_top #71adf8;
+@define-color button_bottom #3879f9;
+@define-color button_border_bottom #3652f9;
+
+/* shadow effects */
+@define-color light_shadow #ffffff;
+@define-color dark_shadow #000000;
+@define-color win_shadow @light_shadow;
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-window-controls.css");
