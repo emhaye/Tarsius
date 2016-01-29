@@ -180,11 +180,11 @@ GtkGrid:insensitive {
  *************/
 
 .separator {
-    color: @menu_separator;
+    color: shade(@theme_bg_color, 0.8);
 }
 
 .vertical.separator {
-    color: @menu_separator;
+    color: shade(@theme_bg_color, 0.8);
     padding: 0 4px;
     -GtkWidget-separator-width: 2px;
     -GtkWidget-wide-separators: true;
@@ -199,12 +199,7 @@ GtkPaned {
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
-    background-color: shade (@base_color, 0.65);
-    /* background-image: none does not hide the grip handle */
-    background-image: linear-gradient(to right,
-                                  shade (@base_color, 0.65),
-                                  shade (@base_color, 0.65)
-                                  );
+    bcolor: shade(@theme_bg_color, 0.8);
 }
 
 GraniteWidgetsThinPaned {
@@ -1929,7 +1924,8 @@ Close button
 
 .notebook .pane-separator,
 .notebook .pane-separator:hover {
-    background-color: @theme_base_color;
+    background-color: shade(@theme_bg_color, 0.8);
+    color: shade(@theme_bg_color, 0.8);
   }
 
 /*************
@@ -2190,12 +2186,12 @@ GtkModelMenuItem GtkBox GtkImage {
 /*Moved titlebar sep here to fix seps in titlebar menus*/
 
 .titlebar .separator {
-    color: transparent;
+    color: shade(@theme_bg_color, 0.8);
     border: none;
 }
 
 .menuitem.separator {
-    color: @menu_separator;
+    color: shade(@theme_bg_color, 0.8);
     padding: 3px 0;
     -GtkWidget-separator-height: 2px;
     -GtkWidget-wide-separators: true;
@@ -3602,7 +3598,7 @@ GtkPopover,
 .popover .label.separator {
 	font-size: 140%;
 	font-weight: normal;
-	color: shade(@theme_fg_color,1.2);
+	color: shade(@theme_bg_color, 0.8);
 	text-shadow: none;
 	background-color: transparent;
 	icon-shadow: none;
@@ -3665,7 +3661,7 @@ GtkModelButton.button {
 GtkPlacesSidebar.sidebar .popover .view.separator {
     font-size: 80%;
     font-weight: bold;
-    color: @menu_separator;
+    color: shade(@theme_bg_color, 0.8);
     text-shadow: none;
     background-color: transparent;
     icon-shadow: none;
