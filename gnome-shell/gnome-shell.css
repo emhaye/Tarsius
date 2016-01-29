@@ -1189,7 +1189,7 @@ transition-duration:300ms;
 }
 
 .app-folder-popup-bin {
-    padding: 5px;
+    padding: 50px;
     color:black;
 }
 
@@ -1220,7 +1220,7 @@ transition-duration:300ms;
 	color:white;
 	border-color:transparent;
 	background-gradient-direction:none;
-	background-color: rgba(74,144,217,.5);
+	background-color: #157EFB;
 	text-shadow: 0px 1px 2px 0px black !important;
 	transition-duration: 100ms;
 }
@@ -3055,14 +3055,16 @@ NEW ON GNOME 3.18
 /* New running app*/
 
 #dash .app-well-app-running-dot {
-  width: 6px;
+  width: 10px;
   height: 6px;
-  border-radius: 3px;
-  margin-bottom: 2px;background-color: #333;background-image:none
-/*  background-color: transparent;
-  background-image: url("assets/running-dot.svg"); */ }
-  .bottom #dash .app-well-app-running-dot, .top #dash .app-well-app-running-dot {
-    margin-bottom: 0px; }
+  background-image:none
+  background-color: transparent;
+  background-image: url("assets/running-dot-dash.svg");
+}
+
+.bottom #dash .app-well-app-running-dot, .top #dash .app-well-app-running-dot {
+    margin-bottom: 0px;
+}
 
 .app-well-app-running-dot {
   width: 10px;
