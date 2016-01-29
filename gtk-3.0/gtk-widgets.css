@@ -392,7 +392,7 @@ GtkProgressBar.trough,
   border-style: none;
   border-radius: 8px;
   background-image: none;
-  background-color: @base_color;
+  background-color: shade(@theme_bg_color, 0.95);
 
 }
 
