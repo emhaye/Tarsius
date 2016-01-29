@@ -650,24 +650,24 @@ GtkProgressBar.osd.progressbar {
 ********/
 
 GtkScale {
-    -GtkRange-slider-width: 20;
+    -GtkRange-slider-width: 18;
     -GtkRange-trough-border: 0;
-    -GtkScale-slider-length: 20;
+    -GtkScale-slider-length: 18;
 }
 
 GtkScale.vertical {
-    -GtkScale-slider-length: 20;
+    -GtkScale-slider-length: 18;
 }
 
 .scale {
-    -GtkScale-slider-length: 20;
-    -GtkRange-slider-width: 20;
+    -GtkScale-slider-length: 18;
+    -GtkRange-slider-width: 18;
     -GtkRange-trough-border: 0;
 
 }
 
 .scale.slider {
-    border: 1px solid shade (@border_color, 0.6);
+    border: 1px solid shade (@border_color, 1.05);
     border-radius: 10px;
 
     background-image: linear-gradient(to bottom,
@@ -706,9 +706,7 @@ GtkScale.vertical {
 
 .scale.trough {
     margin: 6px 0 5px 0;
-
-
-    border-radius: 12px;
+    border-radius: 10px;
     border-width: 0;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
