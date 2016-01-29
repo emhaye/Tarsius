@@ -2844,17 +2844,17 @@ GtkSwitch {
     padding: 0;
     border-radius: 16px;
     font: SNFS Display 11px;
-    border: 0px;
+    border: 1px;
 }
 
 GtkSwitch.slider {
-	padding: 1px;
+	  padding: 1px 0 0 1px;
     border-width: 0px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 1.08);
     background-image: none;
-    box-shadow: 0px 0px 1px 1px shade(@theme_bg_color, 0.8);
+    box-shadow: none;
 }
 
 GtkSwitch.slider:insensitive {
@@ -2865,15 +2865,15 @@ GtkSwitch.slider:insensitive {
 }
 
 GtkSwitch.trough {
-    border-color: shade(@theme_bg_color, 0.8);
+    border: 1px solid shade(@theme_bg_color, 0.90);
     background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
     color: @theme_fg_color;
 }
 
 GtkSwitch.trough:active {
-    border-color: shade(@selected_bg_color, 0.9);
-    background-color: @selected_bg_color;
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: #6d6b6d;
     background-image: none;
     color: @theme_selected_fg_color;
 }
