@@ -3185,7 +3185,11 @@ GtkListBox,
 .sidebar GtkScrolledWindow,
 .source-list,
 .source-list.view {
-    background-color: shade (@titlebar_color, 1.04);
+  background-image:linear-gradient(to bottom,
+                          transparent,
+                          transparent
+                          );
+    background-color: transparent;
     color: #2d2d2d;
     -gtk-icon-style: symbolic;
     font: SNFS Display Thin 11;
