@@ -211,12 +211,9 @@ StScrollBar StButton#vhandle:active {
 .candidate-popup-boxpointer {
     background-color: transparent;
     border: 0px solid rgba(240,240,240,0.9);
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.85),
-                0 12px 30px -6px rgba(0,0,0, 0.95);
     -boxpointer-gap: 12px;
-    
     -arrow-border-radius: 4px;
-    -arrow-background-color: #DEDEDE;
+    -arrow-background-color: rgba(237,237,237,0.9);
     -arrow-border-width: 1px;
     -arrow-border-color: rgba(196,196,196, 255);
     -arrow-base: 0;
@@ -687,12 +684,12 @@ StEntry:insensitive,
 
 #panel {
     background-gradient-direction:none;
-    background-color: rgba(222,222,222,0.90);
+    background-color: rgba(237,237,237,0.78);
     box-shadow: 0px 0px 1px -2px rgba(0,0,0,0.5);
     border: 1px solid rgba(90,105,111,0.5);
     border-top:0px;border-right:0px;border-left:0px;
     font-weight: bold;
-    height: 20px;}
+    height: 22px;}
 #panel:overview {
     background-color: transparent;
     border-color: transparent;
