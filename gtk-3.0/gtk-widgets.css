@@ -26,7 +26,7 @@
 
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkPaned-handle-size: 1px;
+    -GtkPaned-handle-size: 0px;
 
     -GtkWidget-link-color: @link_color;
     -GtkWidget-visited-link-color: @link_color;
