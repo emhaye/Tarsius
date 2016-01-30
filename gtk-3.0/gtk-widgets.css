@@ -914,12 +914,12 @@ GtkComboBox.combobox-entry .button {
   icon-shadow: 0 1px alpha (#000, 0.0);  
 }
 
-/* FIXME: style for checked image buttons*
+/* FIXME: style for checked image buttons*/
 .button:checked GtkImage {
-    color: #08c;
-    icon-shadow: 0 1px 4px alpha (@colorAccent, 0.5),
+    color: #fff;
+    icon-shadow: 0 1px 4px alpha (#000, 0.5),
                                  0 1px 0 alpha (#fff, 0.3);
-}*/
+}
 .header-bar .button:active,
 .header-bar .button:hover:active,
 .header-bar .button:focus:active,
@@ -1009,6 +1009,7 @@ GtkComboBox.combobox-entry .button {
 .titlebar .button:hover:checked,
 .titlebar .button:focus:checked  {
     border-color: transparent;
+    border-bottom-color: alpha (#000, 0.3);
     color: #fff;
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
