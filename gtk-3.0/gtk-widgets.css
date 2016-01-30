@@ -953,10 +953,20 @@ GtkComboBox.combobox-entry .button {
 .titlebar .button:focus:active:backdrop ,
 .titlebar .button:checked:backdrop ,
 .titlebar .button:hover:checked:backdrop ,
-.titlebar .button:focus:checked:backdrop  {
+.titlebar .button:focus:checked:backdrop {
     background-color: transparent;
     background-image: none;
     border: 1px solid alpha (#000, 0.2);
+    color: shade (@textColorPrimary, 0.9);
+    text-shadow: 0 1px alpha (#fff, 0.1);
+    icon-shadow: 0 1px alpha (#fff, 0.1);
+    box-shadow:none;
+}
+
+.button:checked:backdrop GtkImage  {
+    background-color: transparent;
+    background-image: none;
+    border: 0 none;
     color: shade (@textColorPrimary, 0.9);
     text-shadow: 0 1px alpha (#fff, 0.1);
     icon-shadow: 0 1px alpha (#fff, 0.1);
