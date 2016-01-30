@@ -199,7 +199,7 @@ GtkPaned {
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
-    bcolor: shade(@theme_bg_color, 0.8);
+    color: shade(@theme_bg_color, 0.8);
 }
 
 GraniteWidgetsThinPaned {
