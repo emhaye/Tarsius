@@ -885,8 +885,7 @@ transition-duration:300ms;
     padding: 13px;
     border: 1px solid rgba(100,100,100,.3); /* using rgba() is flaky unfortunately */
     transition-duration:200ms;
-    box-shadow: 0px 1px 2px -3px rgba(0,0,0,.5);
-    background-color: #dedede; 
+    background-color: transparent; 
 }
 
 .system-menu-action:hover {
