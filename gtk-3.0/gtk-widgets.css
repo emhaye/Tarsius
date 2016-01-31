@@ -345,7 +345,7 @@ background-color:transparent;
  * Progress bar *
  ****************/
  GtkProgressBar {
-     padding: 0;
+     padding: 2px;
      border-width: 0;
      border-radius: 32px;
  }
@@ -384,7 +384,7 @@ GtkProgressBar.trough,
 .trough row,
 .trough row:hover {
   padding: 0;
-  border-style: none;
+  border: 1px solid shade(@theme_bg_color, 0.77);
   border-radius: 8px;
   background-image: none;
   background-color: shade(@theme_bg_color, 0.95);
@@ -393,7 +393,7 @@ GtkProgressBar.trough,
 
 GtkProgressBar.trough.vertical {
   border-radius: 8px;
-  background-color: @base_color;
+  background-color: shade(@theme_bg_color, 0.95);
   background-image: none;
 }
 
@@ -403,7 +403,7 @@ GtkProgressBar.trough:backdrop,
 .trough row:selected:backdrop,
 .trough row:selected:backdrop:hover {
     background-image: none;
-    background-color: @base_color;
+    background-color: shade(@theme_bg_color, 0.93);
     border-color: shade (@base_color, 0.75);
 }
 
@@ -702,9 +702,7 @@ GtkScale.vertical {
 .scale.trough {
     margin: 6px 0 5px 0;
     border-radius: 10px;
-    border-width: 0;
-    border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
+    border: 1px solid shade(@theme_bg_color, 0.77);
     background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
 
@@ -778,6 +776,13 @@ GtkScale.vertical {
   background-color: @theme_selected_bg_color;
   background-image: none;
   color: #000;
+}
+
+.scale.highlight.bottom:backdrop,
+.scale.highlight.left:backdrop,
+.scale.mark:backdrop {
+  background-color: shade (@bg_color, 0.85);
+  border-color: shade(@theme_bg_color, 0.8);
 }
 
 /*********
