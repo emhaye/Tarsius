@@ -727,11 +727,10 @@ GtkScale.vertical {
 
 .scale.trough.vertical {
     margin: 0 5px 0 6px;
-
-    border-width: 0;
+    border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
-    background-color: shade(@theme_bg_color, 1.08);
+    border-color: shade(@theme_bg_color, 0.77);
+    background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
 }
 
