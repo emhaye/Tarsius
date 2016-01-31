@@ -2855,17 +2855,22 @@ GtkAssistant .sidebar {
  *************/
 
 GtkSwitch {
-    padding: 0;
+    -GtkSwitch-slider-width: 24;
+    -GtkSwitch-slider-height: 24;
+    padding: 1px 3px 1px 1px;
     border-radius: 16px;
-    font: SNFS Display 11px;
-    border: 1px;
+    font: SNFS Display 9px;
+}
+
+GtkSwitch:active {
+    padding: 1px 1px 1px 3px;
 }
 
 GtkSwitch.slider {
-	  padding: 1px 0 0 1px;
-    border-width: 0px;
+    padding: 2px 3px;
+    border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: transparent;
     background-color: shade(@theme_bg_color, 1.08);
     background-image: none;
     box-shadow: none;
@@ -2887,7 +2892,7 @@ GtkSwitch.trough {
 
 GtkSwitch.trough:active {
     border-color: shade(@theme_bg_color, 0.8);
-    background-color: #6d6b6d;
+    background-color: @selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
 }
