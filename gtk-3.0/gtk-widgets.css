@@ -2855,7 +2855,7 @@ GtkAssistant .sidebar {
  *************/
 
 GtkSwitch {
-    -GtkSwitch-slider-width: 24;
+    -GtkSwitch-slider-width: 26;
     -GtkSwitch-slider-height: 24;
     padding: 1px 3px 1px 1px;
     border-radius: 16px;
@@ -2884,21 +2884,21 @@ GtkSwitch.slider:insensitive {
 }
 
 GtkSwitch.trough {
-    border: 1px solid shade(@theme_bg_color, 0.90);
+    border: 1px solid shade(@theme_bg_color, 0.82);
     background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
     color: @theme_fg_color;
 }
 
 GtkSwitch.trough:active {
-    border-color: shade(@theme_bg_color, 0.8);
+    border: 1px solid shade(@theme_bg_color, 0.82);
     background-color: @selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
 }
 
 GtkSwitch.trough:insensitive {
-    border-color: shade(@theme_bg_color, 0.85);
+    border-color: shade(@theme_bg_color, 0.82);
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
     color: mix(@theme_fg_color, @theme_bg_color, 0.5);
