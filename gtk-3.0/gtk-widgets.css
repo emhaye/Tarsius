@@ -2178,8 +2178,16 @@ GtkTreeMenu .menuitem {
     background-color: @selected_bg_color;
     color: @base_color;
     text-shadow: 0 1px alpha (#000, 0.2);
+    border-width: 1px 1px 1px 1px;
 }
 
+.menuitem:active,
+.menuitem:prelight {
+    border-style: solid;
+    border-color: @titlebar_color;
+    border-width: 1px 1px 1px 1px;
+    color: @base_color;
+  }
 .menu .menuitem *:insensitive,
 .popover .menuitem *:insensitive {
     color: @insensitive_color;
@@ -3281,6 +3289,9 @@ GtkDialog .sidebar .view:hover:selected,
     text-shadow: 0 1px alpha (#000, 0.2);
     icon-shadow: 0 1px alpha (#000, 0.0);
     background-color: @selected_bg_color;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 2px 0 2px;
 }
 
 GtkDialog .sidebar .view:selected:backdrop,

@@ -593,6 +593,9 @@ NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:active {
   color: @base_color;
   text-shadow: 0 1px alpha (#000, 0.2);
   icon-shadow: 0 1px alpha (#000, 0.0);
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0 2px 0 2px;
 }
 
 NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:backdrop,
