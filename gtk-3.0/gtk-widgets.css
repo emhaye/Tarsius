@@ -245,6 +245,7 @@ GraniteWidgetsThinPaned {
 .entry:selected,
 .entry:selected:focus {
     background-color: @colorAccent;
+    color: @base_color;
 }
 
 GtkHandleBox .entry,
@@ -2093,7 +2094,7 @@ GtkTreeMenu .menuitem {
 }
 
 .context-menu {
-    font: SNFS Display Thin 10px;
+    font: sfns display thin 11px;
     text-shadow: none;
 }
 
@@ -2529,7 +2530,7 @@ GtkDialog .action-bar {
 }
 
 .action-bar .title {
-    font: Bold 11;
+    font: Bold 11px;
     padding: 0px 10px 0px 10px;
 }
 
@@ -2859,7 +2860,7 @@ GtkSwitch {
     -GtkSwitch-slider-height: 24;
     padding: 1px 3px 1px 1px;
     border-radius: 16px;
-    font: SNFS Display 9px;
+    font: sfns display 9px;
 }
 
 GtkSwitch:active {
@@ -3220,7 +3221,7 @@ GtkListBox,
     background-color: transparent;
     color: #2d2d2d;
     -gtk-icon-style: symbolic;
-    font: SNFS Display Thin 11;
+    font: sfns display 12px;
     text-shadow: 0 1px alpha (#fff, 0.2);
     icon-shadow: 0 1px alpha (#fff, 0.0);
 }
@@ -3551,7 +3552,7 @@ GraniteWidgetsWelcome {
 
 GraniteWidgetsWelcome GtkLabel {
     color: @placeholder_text_color;
-    font: SFNS Display 11;
+    font: sfns display 11;
     text-shadow: none;
 }
 
@@ -4091,10 +4092,10 @@ GtkDialog .toolbar {
 /**************
 * Text Styles *
 **************/
-.title { font: SNFS Display Thin 14; }
-.h1 { font: SNFS Display 12px; }
-.h2 { font: SNFS Display Thin 11px; }
-.h3 { font: SNFS Display 10px; }
+.title { font: sfns display 14px; }
+.h1 { font: sfns display 12px; }
+.h2 { font: sfns display 12px; }
+.h3 { font: sfns display 11px; }
 .h4,
 .category-label {
     color: mix (@bg_color, @text_color, 0.7);
