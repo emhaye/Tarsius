@@ -2851,6 +2851,10 @@ GtkAssistant .sidebar {
     text-shadow: 0 1px shade (@bg_color, 1.04);
 }
 
+GtkAssistant .sidebar .label {
+  padding: 6px 12px;
+}
+
 /*************
  * GtkSwitch *
  *************/
@@ -3394,7 +3398,7 @@ GtkSidebarRow.list-row {
 }
 
 GtkSidebarRow .sidebar-revealer {
-  padding: 1px 14px 1px 12px;
+  padding: 4px 14px 4px 12px;
 }
 
 GtkSidebarRow .sidebar-icon:dir(ltr) {
