@@ -3374,6 +3374,45 @@ GtkDialog .sidebar .view:hover:selected:backdrop,
     background-color: mix (@colorAccent, @base_color, 0.25);
 }
 
+.sidebar-item {
+  padding: 10px 4px;
+}
+
+.sidebar-item > Gtklabel {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.sidebar-item.needs-attention > Gtklabel {
+    background-size: 6px 6px, 0 0;
+}
+
+/* -------------
+NEW ON GTK 3.18
+---------------*/
+GtkSidebarRow.list-row {
+  padding: 0px;
+}
+
+GtkSidebarRow .sidebar-revealer {
+  padding: 1px 14px 1px 12px;
+}
+
+GtkSidebarRow .sidebar-icon:dir(ltr) {
+  padding-right: 8px;
+}
+
+GtkSidebarRow .sidebar-icon:dir(rtl) {
+  padding-left: 8px;
+}
+
+GtkSidebarRow .sidebar-label:dir(ltr) {
+  padding-right: 2px;
+}
+
+GtkSidebarRow .sidebar-label:dir(rtl) {
+  padding-left: 2px;
+}
+
 /***********
 * Expander *
 ***********/
